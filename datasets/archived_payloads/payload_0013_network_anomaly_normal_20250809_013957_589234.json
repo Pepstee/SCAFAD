@@ -1,0 +1,88 @@
+{
+  "anomaly": "network_anomaly",
+  "function_profile_id": "batch_worker",
+  "execution_phase": "shutdown",
+  "concurrency_id": "UJQ",
+  "invocation_timestamp": 1754699759.3339043,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0013",
+  "batch_id": "batch_1754699759_5482",
+  "seed": 42,
+  "invocation_index": 13,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": true,
+  "generic_data": {
+    "type": "batch_worker",
+    "data": "test_data_2710"
+  },
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:35:59.333904",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 13,
+    "anomaly_category": "synthetic"
+  },
+  "network_calls": [
+    {
+      "url": "https://api0.example.com/endpoint",
+      "timeout": 18,
+      "retries": 3
+    },
+    {
+      "url": "https://api1.example.com/endpoint",
+      "timeout": 27,
+      "retries": 4
+    },
+    {
+      "url": "https://api2.example.com/endpoint",
+      "timeout": 16,
+      "retries": 4
+    },
+    {
+      "url": "https://api3.example.com/endpoint",
+      "timeout": 25,
+      "retries": 1
+    },
+    {
+      "url": "https://api4.example.com/endpoint",
+      "timeout": 23,
+      "retries": 4
+    },
+    {
+      "url": "https://api5.example.com/endpoint",
+      "timeout": 6,
+      "retries": 5
+    },
+    {
+      "url": "https://api6.example.com/endpoint",
+      "timeout": 27,
+      "retries": 1
+    },
+    {
+      "url": "https://api7.example.com/endpoint",
+      "timeout": 4,
+      "retries": 3
+    }
+  ],
+  "network_pattern": "intermittent",
+  "execution_environment": {
+    "region": "ap-southeast-1",
+    "availability_zone": "b",
+    "runtime": "python3.10",
+    "memory_allocation": 1024,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 5.007220163715022,
+    "max_memory_mb": 680,
+    "expected_latency": 3.5300699959959134
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_c3c807bc-58cf-40c7-841e-7416acef6243",
+  "parent_invocation": null
+}

@@ -1,0 +1,29 @@
+GT-2 Global Test Invocation Log
+============================================================
+
+Execution Timestamp: 2026-04-30T14:25:41.602960+00:00
+Task ID: 20c72349-8cd4-4555-84e4-e874dc3dd0c6
+Handler: scafad.runtime.lambda_handler.lambda_handler
+Invocation Method: Direct Python import (no AWS API calls)
+Elapsed Time: 0.0959 seconds
+
+Command Used:
+  from scafad.runtime.lambda_handler import lambda_handler
+  event = {...analyst_label='global_test_layer6_activation_20260430'...}
+  response = lambda_handler(event, None)
+
+HTTP Status Code: 200
+Response Size: 15718 bytes
+
+Layer 6 Activation Evidence:
+  - analyst_label provided: global_test_layer6_activation_20260430
+  - layer6 field non-null: True
+  - Layer 6 triggered: True
+
+All Layers Present:
+  - Layer 0: True
+  - Layer 1: True
+  - Multilayer Result: True
+  - Layer 6 Output Non-Null: True
+
+Exit Status: 0 (success)

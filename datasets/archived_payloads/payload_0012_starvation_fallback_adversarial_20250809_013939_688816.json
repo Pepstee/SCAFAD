@@ -1,0 +1,98 @@
+{
+  "anomaly": "starvation_fallback",
+  "function_profile_id": "data_processor",
+  "execution_phase": "shutdown",
+  "concurrency_id": "LZQ",
+  "invocation_timestamp": 1754699759.3323843,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0012",
+  "batch_id": "batch_1754699759_1067",
+  "seed": 42,
+  "invocation_index": 12,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": true,
+  "Records": [
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket-30"
+        },
+        "object": {
+          "key": "data/input_3201.csv"
+        }
+      }
+    },
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket-96"
+        },
+        "object": {
+          "key": "data/input_8259.csv"
+        }
+      }
+    }
+  ],
+  "processing_config": {
+    "batch_size": 2307,
+    "format": "avro",
+    "compression": "none",
+    "parallel_workers": 2
+  },
+  "starvation_type": "dependency_failure",
+  "resource_limit": 0.24924056217094842,
+  "fallback_strategy": "graceful",
+  "execution_environment": {
+    "region": "us-west-2",
+    "availability_zone": "a",
+    "runtime": "python3.9",
+    "memory_allocation": 512,
+    "architecture": "arm64"
+  },
+  "performance_targets": {
+    "max_duration": 4.738993212420779,
+    "max_memory_mb": 456,
+    "expected_latency": 2.5663487455583094
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_e1b6ac18-0727-4fa0-9ab1-7a2e132d157e",
+  "parent_invocation": "parent_1749",
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:35:59.332384",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 12,
+    "anomaly_category": "synthetic"
+  },
+  "enable_adversarial": true,
+  "attack_type": "privilege_escalation",
+  "adversarial_intensity": 0.5682595710212954,
+  "adversarial_metadata": {
+    "target": "data_processor",
+    "expected_impact": "high",
+    "evasion_strategy": "persistent",
+    "attack_complexity": "moderate",
+    "detection_avoidance": false
+  },
+  "attack_payload": {
+    "injection_points": 4,
+    "obfuscation_level": 0.3592508863666324,
+    "polymorphic": true
+  },
+  "economic_attack": "cold_start_farming",
+  "cost_impact_target": 1.9494312283980062,
+  "billing_abuse_type": "memory",
+  "economic_metadata": {
+    "attack_duration": 3038,
+    "resource_amplification": 9.879036195946084,
+    "cost_optimization_bypass": true,
+    "billing_cycle_exploitation": true
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "anomaly": "io_intensive",
+  "function_profile_id": "stream_processor",
+  "execution_phase": "init",
+  "concurrency_id": "GPK",
+  "invocation_timestamp": 1754699759.3369339,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0024",
+  "batch_id": "batch_1754699759_2196",
+  "seed": 42,
+  "invocation_index": 24,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": true,
+  "generic_data": {
+    "type": "stream_processor",
+    "data": "test_data_129"
+  },
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:35:59.336933",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 24,
+    "anomaly_category": "synthetic"
+  },
+  "io_operations": [
+    {
+      "type": "read",
+      "size": 902187
+    },
+    {
+      "type": "read",
+      "size": 961405
+    },
+    {
+      "type": "write",
+      "size": 663045
+    },
+    {
+      "type": "write",
+      "size": 923212
+    },
+    {
+      "type": "write",
+      "size": 828683
+    },
+    {
+      "type": "read",
+      "size": 288372
+    },
+    {
+      "type": "read",
+      "size": 864209
+    },
+    {
+      "type": "write",
+      "size": 494999
+    },
+    {
+      "type": "write",
+      "size": 972526
+    },
+    {
+      "type": "write",
+      "size": 753257
+    },
+    {
+      "type": "write",
+      "size": 920374
+    },
+    {
+      "type": "read",
+      "size": 865470
+    },
+    {
+      "type": "read",
+      "size": 733435
+    },
+    {
+      "type": "write",
+      "size": 531954
+    },
+    {
+      "type": "read",
+      "size": 369972
+    },
+    {
+      "type": "write",
+      "size": 632388
+    },
+    {
+      "type": "write",
+      "size": 476303
+    },
+    {
+      "type": "read",
+      "size": 800013
+    },
+    {
+      "type": "read",
+      "size": 673552
+    },
+    {
+      "type": "read",
+      "size": 661790
+    },
+    {
+      "type": "write",
+      "size": 830467
+    },
+    {
+      "type": "read",
+      "size": 4249
+    },
+    {
+      "type": "write",
+      "size": 210818
+    },
+    {
+      "type": "write",
+      "size": 329985
+    },
+    {
+      "type": "read",
+      "size": 117235
+    },
+    {
+      "type": "read",
+      "size": 262752
+    },
+    {
+      "type": "read",
+      "size": 889126
+    },
+    {
+      "type": "write",
+      "size": 832169
+    },
+    {
+      "type": "write",
+      "size": 474445
+    },
+    {
+      "type": "write",
+      "size": 916961
+    },
+    {
+      "type": "read",
+      "size": 274366
+    },
+    {
+      "type": "read",
+      "size": 721885
+    },
+    {
+      "type": "write",
+      "size": 839390
+    },
+    {
+      "type": "write",
+      "size": 209338
+    },
+    {
+      "type": "read",
+      "size": 435655
+    },
+    {
+      "type": "write",
+      "size": 191748
+    },
+    {
+      "type": "write",
+      "size": 919985
+    },
+    {
+      "type": "write",
+      "size": 991673
+    },
+    {
+      "type": "read",
+      "size": 22765
+    },
+    {
+      "type": "read",
+      "size": 968977
+    },
+    {
+      "type": "read",
+      "size": 951919
+    },
+    {
+      "type": "read",
+      "size": 1022470
+    },
+    {
+      "type": "write",
+      "size": 208921
+    },
+    {
+      "type": "write",
+      "size": 736349
+    },
+    {
+      "type": "read",
+      "size": 53225
+    },
+    {
+      "type": "write",
+      "size": 649048
+    },
+    {
+      "type": "write",
+      "size": 630581
+    },
+    {
+      "type": "write",
+      "size": 157525
+    }
+  ],
+  "io_pattern": "sequential",
+  "execution_environment": {
+    "region": "us-east-1",
+    "availability_zone": "c",
+    "runtime": "python3.11",
+    "memory_allocation": 128,
+    "architecture": "arm64"
+  },
+  "performance_targets": {
+    "max_duration": 28.000873616415273,
+    "max_memory_mb": 546,
+    "expected_latency": 4.550310033083544
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_ed6f03c6-9c30-4575-a489-ab1ee1f504fb",
+  "parent_invocation": null,
+  "simulate_cold_start": true,
+  "cold_start_config": {
+    "init_duration": 2.9097403868522416,
+    "dependency_loading": false,
+    "package_size_mb": 87
+  }
+}

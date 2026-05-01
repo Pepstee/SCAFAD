@@ -1,0 +1,37 @@
+{
+  "anomaly": "benign",
+  "function_profile_id": "auth_service",
+  "execution_phase": "init",
+  "concurrency_id": "UQV",
+  "invocation_timestamp": 1754697798.9609745,
+  "test_mode": true,
+  "payload_id": "scafad_invoke_0017",
+  "batch_id": "batch_1754697798",
+  "seed": 42,
+  "generic_data": {
+    "type": "auth_service",
+    "data": "test_data_59"
+  },
+  "metadata": {
+    "generator": "enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:03:18.960974",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 17
+  },
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "force_starvation": false,
+  "economic_attack": "dos_amplification",
+  "cost_impact_target": 6.727571301532375,
+  "billing_abuse_type": "invocation_count",
+  "execution_environment": {
+    "region": "us-east-1",
+    "availability_zone": "b",
+    "runtime": "python3.9",
+    "memory_allocation": 256
+  }
+}

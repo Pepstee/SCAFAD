@@ -1,0 +1,91 @@
+{
+  "anomaly": "cold_start",
+  "function_profile_id": "ml_inference",
+  "execution_phase": "shutdown",
+  "concurrency_id": "FDN",
+  "invocation_timestamp": 1754697798.9609745,
+  "test_mode": true,
+  "payload_id": "scafad_invoke_0009",
+  "batch_id": "batch_1754697798",
+  "seed": 42,
+  "model_name": "model_regression",
+  "input_data": {
+    "features": [
+      0.27649962696868924,
+      0.5895869059607909,
+      0.7602078953730826,
+      0.5967907405123017,
+      0.9805106304625131,
+      0.8326283633270679,
+      0.2962464632651445,
+      0.36088106914938645,
+      0.3022675887804356,
+      0.7080184857110313,
+      0.12658295984798162,
+      0.04551570098321833,
+      0.05452602023898778,
+      0.29213664455277755,
+      0.9440896147957406,
+      0.6378696551059275,
+      0.7527921757912538,
+      0.10258764678776067,
+      0.012265403375507966,
+      0.2843393271371494,
+      0.478714208606398,
+      0.34070593256029236,
+      0.9654976431382948,
+      0.2524783904929726,
+      0.8617229646275132,
+      0.11408714072492454,
+      0.06534343511393248,
+      0.491746560291068,
+      0.5770211564708181,
+      0.6864510182560166,
+      0.15172700695095642,
+      0.8111420762750475,
+      0.9491256423580312,
+      0.08518090839623005,
+      0.24819095521011614,
+      0.5580730346176285,
+      0.41617402141032844,
+      0.5961268454100253,
+      0.6184183524972732,
+      0.7756935396982173
+    ],
+    "metadata": {
+      "version": "v1.2",
+      "timestamp": 1754697798.9609745
+    }
+  },
+  "inference_config": {
+    "batch_inference": false,
+    "confidence_threshold": 0.8126286162221885
+  },
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "force_starvation": false,
+  "metadata": {
+    "generator": "enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:03:18.960974",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 9
+  },
+  "enable_adversarial": true,
+  "attack_type": "cryptomining",
+  "adversarial_intensity": 0.8,
+  "adversarial_metadata": {
+    "target": "ml_inference",
+    "expected_impact": "medium",
+    "evasion_strategy": "stealth"
+  },
+  "execution_environment": {
+    "region": "us-west-2",
+    "availability_zone": "b",
+    "runtime": "python3.9",
+    "memory_allocation": 512
+  }
+}

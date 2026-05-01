@@ -1,0 +1,55 @@
+{
+  "anomaly": "execution_failure",
+  "function_profile_id": "batch_worker",
+  "execution_phase": "init",
+  "concurrency_id": "LXK",
+  "invocation_timestamp": 1754702991.2554576,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0004",
+  "batch_id": "batch_1754702991_2264",
+  "seed": 42,
+  "invocation_index": 4,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": false,
+  "enable_adversarial_detection": false,
+  "generic_data": {
+    "type": "batch_worker",
+    "data": "test_data_8726"
+  },
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T02:29:51.255457",
+    "mode": "test",
+    "total_invocations": 10,
+    "invocation_index": 4,
+    "anomaly_category": "synthetic"
+  },
+  "execution_environment": {
+    "region": "eu-west-1",
+    "availability_zone": "a",
+    "runtime": "python3.9",
+    "memory_allocation": 2048,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 20.19594788377111,
+    "max_memory_mb": 961,
+    "expected_latency": 3.854907261791484
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_fdeb1144-8c0c-4555-86d3-8ad46d336fbb",
+  "parent_invocation": null,
+  "graph_analysis": true,
+  "graph_type": "complex_chain",
+  "graph_config": {
+    "node_count": 10,
+    "edge_count": 18,
+    "topology": "linear"
+  },
+  "analysis_depth": 5,
+  "enable_clustering": false,
+  "temporal_analysis": false
+}

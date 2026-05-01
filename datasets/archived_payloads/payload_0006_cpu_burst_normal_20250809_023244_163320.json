@@ -1,0 +1,67 @@
+{
+  "anomaly": "cpu_burst",
+  "function_profile_id": "api_gateway",
+  "execution_phase": "invoke",
+  "concurrency_id": "YFY",
+  "invocation_timestamp": 1754702991.2554576,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0006",
+  "batch_id": "batch_1754702991_5742",
+  "seed": 42,
+  "invocation_index": 6,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": false,
+  "enable_adversarial_detection": false,
+  "httpMethod": "DELETE",
+  "path": "/api/v2/analytics",
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer e71db8fc-d128-4d40-8007-4f85281add69",
+    "User-Agent": "SCAFAD-Test-Client/1.1",
+    "X-API-Key": "e41990b122b864f164d2ab96e8322690"
+  },
+  "queryStringParameters": {
+    "limit": "527",
+    "offset": "7491",
+    "sort": "asc",
+    "filter": "active"
+  },
+  "body": "{\"action\": \"bulk_operation\", \"data\": {\"id\": 46255, \"timestamp\": 1754702991.2554576}}",
+  "computational_task": {
+    "iterations": 402620,
+    "complexity": "low",
+    "algorithm": "compression"
+  },
+  "execution_environment": {
+    "region": "us-east-1",
+    "availability_zone": "a",
+    "runtime": "python3.10",
+    "memory_allocation": 2048,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 27.925190534493495,
+    "max_memory_mb": 407,
+    "expected_latency": 1.4943520965152268
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_35076421-2c10-48e2-8255-3341aadf8bb9",
+  "parent_invocation": null,
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T02:29:51.255457",
+    "mode": "test",
+    "total_invocations": 10,
+    "invocation_index": 6,
+    "anomaly_category": "synthetic"
+  },
+  "simulate_cold_start": true,
+  "cold_start_config": {
+    "init_duration": 5.290020398394743,
+    "dependency_loading": false,
+    "package_size_mb": 59
+  }
+}

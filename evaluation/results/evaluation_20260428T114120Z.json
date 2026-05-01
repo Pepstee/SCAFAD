@@ -1,0 +1,185 @@
+{
+  "scafad_evaluation": {
+    "run_id": "20260428T114120Z",
+    "timestamp_utc": "2026-04-28T11:42:01.246248Z",
+    "seed": 42,
+    "python_version": "3.11.0",
+    "platform": "Windows 10",
+    "scafad_package_dir": "C:\\Projects\\SCAFAD\\project\\scafad-r-core\\scafad",
+    "status": "ALL_PASS",
+    "summary": {
+      "suites_run": 15,
+      "total_tests": 536,
+      "total_failures": 0,
+      "total_errors": 0,
+      "total_duration_s": 40.75
+    },
+    "suite_results": [
+      {
+        "id": "T-013",
+        "label": "Layer-1 Input Validation (InputValidationGateway)",
+        "path": "layer1/tests/test_layer1_validation.py",
+        "status": "pass",
+        "tests_run": 36,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.047,
+        "returncode": 0
+      },
+      {
+        "id": "T-014",
+        "label": "Layer-1 Preservation Assessment (PreservationAssessment)",
+        "path": "layer1/tests/test_layer1_preservation.py",
+        "status": "pass",
+        "tests_run": 39,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.032,
+        "returncode": 0
+      },
+      {
+        "id": "T-015",
+        "label": "Layer-1 Privacy Compliance (PrivacyComplianceFilter)",
+        "path": "layer1/tests/test_layer1_privacy.py",
+        "status": "pass",
+        "tests_run": 25,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.031,
+        "returncode": 0
+      },
+      {
+        "id": "T-016",
+        "label": "Layer-1 Sanitisation (SanitisationProcessor)",
+        "path": "layer1/tests/test_layer1_sanitisation.py",
+        "status": "pass",
+        "tests_run": 36,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.062,
+        "returncode": 0
+      },
+      {
+        "id": "T-017",
+        "label": "Layer-1 Deferred Hashing (DeferredHashingManager + HMAC)",
+        "path": "layer1/tests/test_layer1_hashing.py",
+        "status": "pass",
+        "tests_run": 28,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.25,
+        "returncode": 0
+      },
+      {
+        "id": "T-018",
+        "label": "Layer-2 Multi-Vector Detection (MultiVectorDetectionMatrix)",
+        "path": "layer2/tests/test_layer2_detection.py",
+        "status": "pass",
+        "tests_run": 37,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.063,
+        "returncode": 0
+      },
+      {
+        "id": "T-019",
+        "label": "Layer-0 Adapter (RCoreToLayer1Adapter)",
+        "path": "layer0/tests/test_layer0_adapter.py",
+        "status": "pass",
+        "tests_run": 34,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 0.203,
+        "returncode": 0
+      },
+      {
+        "id": "T-020",
+        "label": "Layer-1 Extended Modules (scafad-delta reconciliation)",
+        "path": "layer1/tests/test_layer1_extended.py",
+        "status": "pass",
+        "tests_run": 39,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.172,
+        "returncode": 0
+      },
+      {
+        "id": "T-021",
+        "label": "Layer-3 Trust-Weighted Fusion (C-2 TrustWeightedFusionEngine)",
+        "path": "layer3/tests/test_layer3_fusion.py",
+        "status": "pass",
+        "tests_run": 37,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.265,
+        "returncode": 0
+      },
+      {
+        "id": "T-022",
+        "label": "Layer-4 Tiered Explainability (C-4 ExplainabilityDecisionEngine)",
+        "path": "layer4/tests/test_layer4_explainability.py",
+        "status": "pass",
+        "tests_run": 37,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.157,
+        "returncode": 0
+      },
+      {
+        "id": "T-023",
+        "label": "Layer-5 MITRE Threat Alignment (ThreatAlignmentEngine)",
+        "path": "layer5/tests/test_layer5_threat.py",
+        "status": "pass",
+        "tests_run": 49,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.062,
+        "returncode": 0
+      },
+      {
+        "id": "T-024",
+        "label": "Layer-6 Feedback Learning (FeedbackLearningEngine)",
+        "path": "layer6/tests/test_layer6_feedback.py",
+        "status": "pass",
+        "tests_run": 29,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.219,
+        "returncode": 0
+      },
+      {
+        "id": "T-025",
+        "label": "Runtime E2E Integration (SCAFADCanonicalRuntime L0->L6)",
+        "path": "runtime/tests/test_runtime_e2e.py",
+        "status": "pass",
+        "tests_run": 44,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 2.672,
+        "returncode": 0
+      },
+      {
+        "id": "T-026",
+        "label": "Layer-0 Core Tests (TelemetryRecord, AnomalyDetectionEngine, imports)",
+        "path": "layer0/tests/test_layer0_core.py",
+        "status": "pass",
+        "tests_run": 50,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 13.203,
+        "returncode": 0
+      },
+      {
+        "id": "T-027",
+        "label": "Layer-0 Detector Registry (per-detector unit tests, WP-3.7)",
+        "path": "layer0/tests/test_layer0_detectors.py",
+        "status": "pass",
+        "tests_run": 16,
+        "failures": 0,
+        "errors": 0,
+        "duration_s": 1.312,
+        "returncode": 0
+      }
+    ]
+  }
+}

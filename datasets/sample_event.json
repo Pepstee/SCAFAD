@@ -1,0 +1,48 @@
+{
+  "event_id": "sample-wp43-001",
+  "payload_id": "sample-wp43-001",
+  "function_profile_id": "scafad_test_function",
+  "function_id": "scafad_test_function",
+  "execution_phase": "invoke",
+  "anomaly": "benign",
+  "anomaly_type": "benign",
+  "invocation_timestamp": 1745000000.0,
+  "timestamp": 1745000000.0,
+  "concurrency_id": "WP43-SAMPLE",
+  "schema_version": "v4.2",
+  "test_mode": true,
+  "layer0_enabled": true,
+  "duration": 150,
+  "memory_spike_kb": 256,
+  "cpu_utilization": 26.0,
+  "network_io_bytes": 2048,
+  "fallback_mode": false,
+  "force_starvation": false,
+  "enable_adversarial": false,
+  "adversarial_score": 0.0,
+  "economic_risk_score": 0.0,
+  "silent_failure_probability": 0.0,
+  "completeness_score": 1.0,
+  "confidence_level": 0.95,
+  "data_quality_score": 1.0,
+  "region": "eu-west-1",
+  "runtime_version": "python3.11",
+  "payload_size_bytes": 512,
+  "trigger_type": "test",
+  "execution_environment": {
+    "region": "eu-west-1",
+    "runtime": "python3.11"
+  },
+  "telemetry_fields": {
+    "duration_ms": 150,
+    "max_memory_used_mb": 256
+  },
+  "custom_fields": {
+    "source": "WP-4.3-sample-event",
+    "description": "Synthetic test event for SAM local invoke validation"
+  },
+  "tags": {
+    "wp": "4.3",
+    "environment": "local-sam"
+  }
+}

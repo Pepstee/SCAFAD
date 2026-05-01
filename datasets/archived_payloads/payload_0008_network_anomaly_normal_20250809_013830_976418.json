@@ -1,0 +1,242 @@
+{
+  "anomaly": "network_anomaly",
+  "function_profile_id": "auth_service",
+  "execution_phase": "invoke",
+  "concurrency_id": "IBW",
+  "invocation_timestamp": 1754699759.3323843,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0008",
+  "batch_id": "batch_1754699759_4971",
+  "seed": 42,
+  "invocation_index": 8,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": true,
+  "authentication_request": {
+    "username": "user_7739",
+    "auth_method": "password",
+    "client_id": "55958397-c31b-4170-b174-ce91c35035bb",
+    "scopes": [
+      "execute"
+    ]
+  },
+  "session_config": {
+    "timeout": 3258,
+    "multi_factor": false,
+    "encryption_level": "maximum"
+  },
+  "network_calls": [
+    {
+      "url": "https://api0.example.com/endpoint",
+      "timeout": 14,
+      "retries": 0
+    },
+    {
+      "url": "https://api1.example.com/endpoint",
+      "timeout": 1,
+      "retries": 0
+    },
+    {
+      "url": "https://api2.example.com/endpoint",
+      "timeout": 12,
+      "retries": 4
+    },
+    {
+      "url": "https://api3.example.com/endpoint",
+      "timeout": 3,
+      "retries": 4
+    },
+    {
+      "url": "https://api4.example.com/endpoint",
+      "timeout": 20,
+      "retries": 2
+    },
+    {
+      "url": "https://api5.example.com/endpoint",
+      "timeout": 28,
+      "retries": 3
+    },
+    {
+      "url": "https://api6.example.com/endpoint",
+      "timeout": 1,
+      "retries": 2
+    },
+    {
+      "url": "https://api7.example.com/endpoint",
+      "timeout": 14,
+      "retries": 3
+    },
+    {
+      "url": "https://api8.example.com/endpoint",
+      "timeout": 25,
+      "retries": 0
+    },
+    {
+      "url": "https://api9.example.com/endpoint",
+      "timeout": 24,
+      "retries": 4
+    },
+    {
+      "url": "https://api10.example.com/endpoint",
+      "timeout": 29,
+      "retries": 1
+    },
+    {
+      "url": "https://api11.example.com/endpoint",
+      "timeout": 19,
+      "retries": 4
+    },
+    {
+      "url": "https://api12.example.com/endpoint",
+      "timeout": 6,
+      "retries": 5
+    },
+    {
+      "url": "https://api13.example.com/endpoint",
+      "timeout": 13,
+      "retries": 1
+    },
+    {
+      "url": "https://api14.example.com/endpoint",
+      "timeout": 5,
+      "retries": 2
+    },
+    {
+      "url": "https://api15.example.com/endpoint",
+      "timeout": 10,
+      "retries": 2
+    },
+    {
+      "url": "https://api16.example.com/endpoint",
+      "timeout": 16,
+      "retries": 1
+    },
+    {
+      "url": "https://api17.example.com/endpoint",
+      "timeout": 3,
+      "retries": 1
+    },
+    {
+      "url": "https://api18.example.com/endpoint",
+      "timeout": 14,
+      "retries": 2
+    },
+    {
+      "url": "https://api19.example.com/endpoint",
+      "timeout": 14,
+      "retries": 2
+    },
+    {
+      "url": "https://api20.example.com/endpoint",
+      "timeout": 16,
+      "retries": 0
+    },
+    {
+      "url": "https://api21.example.com/endpoint",
+      "timeout": 12,
+      "retries": 2
+    },
+    {
+      "url": "https://api22.example.com/endpoint",
+      "timeout": 8,
+      "retries": 5
+    },
+    {
+      "url": "https://api23.example.com/endpoint",
+      "timeout": 21,
+      "retries": 3
+    },
+    {
+      "url": "https://api24.example.com/endpoint",
+      "timeout": 20,
+      "retries": 4
+    },
+    {
+      "url": "https://api25.example.com/endpoint",
+      "timeout": 7,
+      "retries": 3
+    },
+    {
+      "url": "https://api26.example.com/endpoint",
+      "timeout": 4,
+      "retries": 1
+    },
+    {
+      "url": "https://api27.example.com/endpoint",
+      "timeout": 10,
+      "retries": 0
+    },
+    {
+      "url": "https://api28.example.com/endpoint",
+      "timeout": 13,
+      "retries": 2
+    },
+    {
+      "url": "https://api29.example.com/endpoint",
+      "timeout": 27,
+      "retries": 4
+    },
+    {
+      "url": "https://api30.example.com/endpoint",
+      "timeout": 13,
+      "retries": 2
+    },
+    {
+      "url": "https://api31.example.com/endpoint",
+      "timeout": 15,
+      "retries": 2
+    },
+    {
+      "url": "https://api32.example.com/endpoint",
+      "timeout": 14,
+      "retries": 5
+    },
+    {
+      "url": "https://api33.example.com/endpoint",
+      "timeout": 20,
+      "retries": 1
+    },
+    {
+      "url": "https://api34.example.com/endpoint",
+      "timeout": 10,
+      "retries": 2
+    },
+    {
+      "url": "https://api35.example.com/endpoint",
+      "timeout": 20,
+      "retries": 5
+    },
+    {
+      "url": "https://api36.example.com/endpoint",
+      "timeout": 7,
+      "retries": 3
+    }
+  ],
+  "network_pattern": "sustained",
+  "execution_environment": {
+    "region": "eu-west-1",
+    "availability_zone": "b",
+    "runtime": "python3.10",
+    "memory_allocation": 1024,
+    "architecture": "arm64"
+  },
+  "performance_targets": {
+    "max_duration": 4.302746884747945,
+    "max_memory_mb": 641,
+    "expected_latency": 1.0790202386819754
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_a1351d97-cf68-441f-9119-0c2001e5f6ce",
+  "parent_invocation": "parent_1440",
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:35:59.332384",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 8,
+    "anomaly_category": "synthetic"
+  }
+}

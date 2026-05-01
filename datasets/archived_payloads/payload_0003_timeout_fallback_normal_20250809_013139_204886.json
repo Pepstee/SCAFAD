@@ -1,0 +1,48 @@
+{
+  "anomaly": "timeout_fallback",
+  "function_profile_id": "image_resizer",
+  "execution_phase": "init",
+  "concurrency_id": "QGR",
+  "invocation_timestamp": 1754699441.1088479,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0003",
+  "batch_id": "batch_1754699441_7062",
+  "seed": 42,
+  "invocation_index": 3,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": false,
+  "generic_data": {
+    "type": "image_resizer",
+    "data": "test_data_8792"
+  },
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:30:41.108847",
+    "mode": "test",
+    "total_invocations": 5,
+    "invocation_index": 3,
+    "anomaly_category": "synthetic"
+  },
+  "timeout_duration": 7,
+  "timeout_type": "soft",
+  "fallback_action": "abort",
+  "execution_environment": {
+    "region": "eu-west-1",
+    "availability_zone": "c",
+    "runtime": "python3.10",
+    "memory_allocation": 2048,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 26.616923351031957,
+    "max_memory_mb": 223,
+    "expected_latency": 0.8713084958250504
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_418cf4c4-34db-4c96-85ae-6014e97dda9e",
+  "parent_invocation": "parent_2336"
+}

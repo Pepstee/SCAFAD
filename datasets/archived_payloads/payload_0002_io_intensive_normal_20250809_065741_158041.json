@@ -1,0 +1,37 @@
+{
+  "anomaly": "io_intensive",
+  "function_profile_id": "ml_inference",
+  "execution_phase": "shutdown",
+  "concurrency_id": "LDX",
+  "invocation_timestamp": 1754719028.3550837,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0002",
+  "batch_id": "batch_1754719028_2291",
+  "seed": 42,
+  "invocation_index": 2,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": false,
+  "enable_provenance": true,
+  "enable_economic_monitoring": false,
+  "enable_adversarial_detection": true,
+  "execution_environment": {
+    "region": "eu-west-1",
+    "runtime": "python3.11",
+    "memory_allocation": 512,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 17.7432122124461,
+    "max_memory_mb": 785,
+    "expected_latency": 0.4408202292363306
+  },
+  "force_starvation": false,
+  "metadata": {
+    "generator": "scafad_sam_invoke.py",
+    "generation_time": "2025-08-09T06:57:08.355083",
+    "mode": "test",
+    "total_invocations": 3,
+    "invocation_index": 2
+  }
+}

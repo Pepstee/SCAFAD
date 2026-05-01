@@ -1,0 +1,59 @@
+{
+  "anomaly": "network_anomaly",
+  "function_profile_id": "cache_manager",
+  "execution_phase": "invoke",
+  "concurrency_id": "QTK",
+  "invocation_timestamp": 1754697798.9609745,
+  "test_mode": true,
+  "payload_id": "scafad_invoke_0024",
+  "batch_id": "batch_1754697798",
+  "seed": 42,
+  "generic_data": {
+    "type": "cache_manager",
+    "data": "test_data_50"
+  },
+  "metadata": {
+    "generator": "enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:03:18.960974",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 24
+  },
+  "network_calls": [
+    {
+      "url": "https://api0.example.com",
+      "timeout": 10
+    },
+    {
+      "url": "https://api1.example.com",
+      "timeout": 16
+    },
+    {
+      "url": "https://api2.example.com",
+      "timeout": 20
+    }
+  ],
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "force_starvation": false,
+  "enable_adversarial": true,
+  "attack_type": "adaptive",
+  "adversarial_intensity": 0.5,
+  "adversarial_metadata": {
+    "target": "cache_manager",
+    "expected_impact": "low",
+    "evasion_strategy": "burst"
+  },
+  "economic_attack": "cryptomining",
+  "cost_impact_target": 7.683818538554831,
+  "billing_abuse_type": "memory",
+  "execution_environment": {
+    "region": "ap-southeast-1",
+    "availability_zone": "a",
+    "runtime": "python3.9",
+    "memory_allocation": 2048
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "anomaly": "timeout_fallback",
+  "function_profile_id": "data_processor",
+  "execution_phase": "invoke",
+  "concurrency_id": "RSY",
+  "invocation_timestamp": 1754702991.2544317,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0003",
+  "batch_id": "batch_1754702991_1510",
+  "seed": 42,
+  "invocation_index": 3,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": false,
+  "enable_adversarial_detection": false,
+  "Records": [
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket-44"
+        },
+        "object": {
+          "key": "data/input_9318.csv"
+        }
+      }
+    },
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket-1"
+        },
+        "object": {
+          "key": "data/input_5634.parquet"
+        }
+      }
+    },
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket-39"
+        },
+        "object": {
+          "key": "data/input_9022.json"
+        }
+      }
+    },
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket-58"
+        },
+        "object": {
+          "key": "data/input_9824.csv"
+        }
+      }
+    },
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket-45"
+        },
+        "object": {
+          "key": "data/input_6446.parquet"
+        }
+      }
+    },
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket-98"
+        },
+        "object": {
+          "key": "data/input_9903.csv"
+        }
+      }
+    },
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket-59"
+        },
+        "object": {
+          "key": "data/input_6272.json"
+        }
+      }
+    }
+  ],
+  "processing_config": {
+    "batch_size": 2056,
+    "format": "avro",
+    "compression": "gzip",
+    "parallel_workers": 7
+  },
+  "timeout_duration": 2,
+  "timeout_type": "progressive",
+  "fallback_action": "cache",
+  "execution_environment": {
+    "region": "us-east-1",
+    "availability_zone": "b",
+    "runtime": "python3.10",
+    "memory_allocation": 1024,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 15.217796770182533,
+    "max_memory_mb": 995,
+    "expected_latency": 2.2734554138787426
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_7c723b54-ff4b-4ff8-b494-cc690c898483",
+  "parent_invocation": null,
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T02:29:51.254431",
+    "mode": "test",
+    "total_invocations": 10,
+    "invocation_index": 3,
+    "anomaly_category": "synthetic"
+  },
+  "graph_analysis": true,
+  "graph_type": "complex_chain",
+  "graph_config": {
+    "node_count": 13,
+    "edge_count": 14,
+    "topology": "linear"
+  },
+  "analysis_depth": 5,
+  "enable_clustering": false,
+  "temporal_analysis": true
+}

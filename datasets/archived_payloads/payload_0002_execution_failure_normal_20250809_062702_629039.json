@@ -1,0 +1,83 @@
+{
+  "anomaly": "execution_failure",
+  "function_profile_id": "ml_inference",
+  "execution_phase": "invoke",
+  "concurrency_id": "PRC",
+  "invocation_timestamp": 1754717220.7695868,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0002",
+  "batch_id": "batch_1754717220_4241",
+  "seed": 42,
+  "invocation_index": 2,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": false,
+  "enable_adversarial_detection": false,
+  "model_name": "model_nlp",
+  "input_data": {
+    "features": [
+      0.86685135559513,
+      0.18172902651343215,
+      0.2601563139193047,
+      0.32735266694173426,
+      0.45469932501648214,
+      0.33750054807387064,
+      0.8796399860018954,
+      0.278256615638806,
+      0.9512041198605617,
+      0.42156482675873874,
+      0.8349109149121212,
+      0.4703068362130469,
+      0.7490242610828507,
+      0.05208560824325548,
+      0.951919692381921,
+      0.22422216571974818,
+      0.06861837045276942,
+      0.9572856027763683,
+      0.04025813754076657,
+      0.031029998880712117,
+      0.247283303732877,
+      0.8392288462845982,
+      0.6213356565861579,
+      0.23854494188890585,
+      0.47356106094612804,
+      0.11438944610930657,
+      0.9477570222166518
+    ],
+    "metadata": {
+      "version": "v1.2",
+      "timestamp": 1754717220.7695868
+    },
+    "batch_size": 30
+  },
+  "inference_config": {
+    "batch_inference": false,
+    "confidence_threshold": 0.8917245245890602,
+    "max_tokens": 443
+  },
+  "execution_environment": {
+    "region": "ap-southeast-1",
+    "availability_zone": "a",
+    "runtime": "python3.9",
+    "memory_allocation": 256,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 27.343931911165576,
+    "max_memory_mb": 910,
+    "expected_latency": 0.7969577986740187
+  },
+  "force_starvation": true,
+  "provenance_chain": "chain_9fb272f7-f6e4-4d01-93a1-20f677dac0eb",
+  "parent_invocation": "parent_6039",
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T06:27:00.769586",
+    "mode": "test",
+    "total_invocations": 5,
+    "invocation_index": 2,
+    "anomaly_category": "synthetic"
+  }
+}

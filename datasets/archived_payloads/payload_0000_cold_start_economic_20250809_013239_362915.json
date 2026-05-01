@@ -1,0 +1,86 @@
+{
+  "anomaly": "cold_start",
+  "function_profile_id": "ml_inference",
+  "execution_phase": "shutdown",
+  "concurrency_id": "HFT",
+  "invocation_timestamp": 1754699559.360405,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0000",
+  "batch_id": "batch_1754699559_9565",
+  "seed": 42,
+  "invocation_index": 0,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": true,
+  "model_name": "model_vision",
+  "input_data": {
+    "features": [
+      0.5904925124490397,
+      0.03178267948178359,
+      0.09369523986159245,
+      0.2326608933907396,
+      0.6020187290499803,
+      0.561245062938613,
+      0.7160196129224035,
+      0.7013249735902359,
+      0.41951982096165874,
+      0.4492090462838536,
+      0.2781907082306627,
+      0.869300320792934,
+      0.7588073671297673,
+      0.15965931637689013,
+      0.42261439815350255,
+      0.27787134167164185,
+      0.2153137621075888,
+      0.7634941290065239,
+      0.10221027651984871,
+      0.3799273006373374,
+      0.3589793804846284
+    ],
+    "metadata": {
+      "version": "v1.2",
+      "timestamp": 1754699559.360405
+    },
+    "batch_size": 23
+  },
+  "inference_config": {
+    "batch_inference": false,
+    "confidence_threshold": 0.901782068318595,
+    "max_tokens": 1594
+  },
+  "execution_environment": {
+    "region": "eu-west-1",
+    "availability_zone": "b",
+    "runtime": "python3.11",
+    "memory_allocation": 3008,
+    "architecture": "arm64"
+  },
+  "performance_targets": {
+    "max_duration": 7.921892625859535,
+    "max_memory_mb": 469,
+    "expected_latency": 0.7413035824245366
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_ad1f52b2-f5d7-4c73-a6e5-626339b2319d",
+  "parent_invocation": null,
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:32:39.360405",
+    "mode": "test",
+    "total_invocations": 10,
+    "invocation_index": 0,
+    "anomaly_category": "synthetic"
+  },
+  "economic_attack": "resource_waste",
+  "cost_impact_target": 3.2216269458413755,
+  "billing_abuse_type": "memory",
+  "economic_metadata": {
+    "attack_duration": 2132,
+    "resource_amplification": 4.121603318003211,
+    "cost_optimization_bypass": false,
+    "billing_cycle_exploitation": true
+  }
+}

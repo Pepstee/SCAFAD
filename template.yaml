@@ -1,0 +1,399 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  SCAFAD Layer 0 - Modular Serverless Context-Aware Fusion Anomaly Detection Framework
+  
+  Modern modular architecture with 12 specialized Layer 0 components:
+  - Adaptive Telemetry Controller with 26 ML algorithms
+  - Multi-channel telemetry emission system
+  - Advanced health monitoring with MTTR tracking
+  - Privacy compliance pipeline (GDPR/CCPA)
+  - L0-L1 contract validation system
+  - Adaptive buffering and backpressure management
+
+Parameters:
+  Stage:
+    Type: String
+    Default: dev
+    AllowedValues: [dev, staging, prod]
+    Description: Deployment stage
+  
+  VerbosityLevel:
+    Type: String
+    Default: NORMAL
+    AllowedValues: [MINIMAL, NORMAL, VERBOSE, DEBUG]
+    Description: Logging verbosity level
+  
+  EnableGraphAnalysis:
+    Type: String
+    Default: 'true'
+    AllowedValues: ['true', 'false']
+    Description: Enable graph-based anomaly analysis
+  
+  EnableEconomicMonitoring:
+    Type: String
+    Default: 'true'
+    AllowedValues: ['true', 'false']
+    Description: Enable economic abuse detection
+  
+  EnableProvenanceTracking:
+    Type: String
+    Default: 'true'
+    AllowedValues: ['true', 'false']
+    Description: Enable provenance chain tracking
+
+Globals:
+  Function:
+    Runtime: python3.11
+    Handler: scafad/runtime/lambda_handler.lambda_handler
+    Timeout: 300
+    MemorySize: 1024
+    Architectures:
+      - x86_64
+    Tracing: Active
+    Environment:
+      Variables:
+        # Core SCAFAD Configuration
+        SCAFAD_VERSION: v4.2-modular
+        SCAFAD_STAGE: !Ref Stage
+        SCAFAD_VERBOSITY: !Ref VerbosityLevel
+        
+        # Feature Toggles
+        SCAFAD_ENABLE_GRAPH: !Ref EnableGraphAnalysis
+        SCAFAD_ENABLE_ECONOMIC: !Ref EnableEconomicMonitoring
+        SCAFAD_ENABLE_PROVENANCE: !Ref EnableProvenanceTracking
+        SCAFAD_ENABLE_HEALTH_MONITORING: 'true'
+        SCAFAD_ENABLE_PRIVACY_COMPLIANCE: 'true'
+        SCAFAD_ENABLE_L0_L1_CONTRACT: 'true'
+        
+        # Performance Configuration
+        SCAFAD_TEMPORAL_WINDOW: '300'
+        SCAFAD_TIMEOUT_THRESHOLD: '0.6'
+        SCAFAD_MAX_BUFFER_SIZE: '1000'
+        SCAFAD_BATCH_SIZE: '10'
+        
+        # ML Configuration
+        SCAFAD_ML_CONFIDENCE_THRESHOLD: '0.7'
+        SCAFAD_ANOMALY_ALGORITHMS: '26'
+        SCAFAD_FUSION_METHOD: 'trust_weighted'
+        
+        # Health Monitoring
+        SCAFAD_HEALTH_CHECK_INTERVAL: '5000'
+        SCAFAD_HEARTBEAT_TIMEOUT: '3000'
+        SCAFAD_MTTR_TARGET: '300'
+        
+        # Privacy & Compliance
+        SCAFAD_PII_DETECTION: 'true'
+        SCAFAD_GDPR_COMPLIANCE: 'true'
+        SCAFAD_AUDIT_RETENTION_DAYS: '2555'
+
+        # Python path — ensures layer0/layer1/… sub-packages resolve correctly
+        # when Lambda loads the handler from scafad/runtime/lambda_handler.py.
+        # Without this, `from layer0.telemetry import …` fails at runtime because
+        # /var/task/scafad/ is not in the default Lambda PYTHONPATH.
+        PYTHONPATH: '/var/task/scafad:/var/task'
+
+Resources:
+  # Main SCAFAD Layer 0 Function
+  SCAFADLayer0Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub 'scafad-layer0-${Stage}'
+      Description: >
+        SCAFAD Layer 0 - Modular Anomaly Detection Framework with advanced ML algorithms,
+        health monitoring, privacy compliance, and multi-channel telemetry emission
+      CodeUri: .
+      ReservedConcurrentExecutions: 100
+      DeadLetterQueue:
+        Type: SQS
+        TargetArn: !GetAtt SCAFADDeadLetterQueue.Arn
+      Events:
+        # API Gateway for direct invocations
+        SCAFADApi:
+          Type: Api
+          Properties:
+            Path: /scafad
+            Method: post
+            RestApiId: !Ref SCAFADApiGateway
+        
+        # CloudWatch Events for scheduled anomaly detection
+        ScheduledInvocation:
+          Type: Schedule
+          Properties:
+            Schedule: rate(5 minutes)
+            Input: '{"source": "scheduled", "mode": "health_check"}'
+        
+        # S3 Events for telemetry log processing
+        TelemetryLogProcessing:
+          Type: S3
+          Properties:
+            Bucket: !Ref SCAFADTelemetryBucket
+            Events: s3:ObjectCreated:*
+            Filter:
+              S3Key:
+                Rules:
+                  - Name: prefix
+                    Value: telemetry-logs/
+                  - Name: suffix
+                    Value: .json
+      
+      Policies:
+        # Basic Lambda execution
+        - AWSLambdaBasicExecutionRole
+        
+        # CloudWatch access for telemetry emission
+        - Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - logs:CreateLogGroup
+                - logs:CreateLogStream
+                - logs:PutLogEvents
+                - cloudwatch:PutMetricData
+              Resource: '*'
+        
+        # X-Ray tracing
+        - Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - xray:PutTraceSegments
+                - xray:PutTelemetryRecords
+              Resource: '*'
+        
+        # S3 access for telemetry storage
+        - Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+                - s3:PutObject
+                - s3:DeleteObject
+              Resource: 
+                - !Sub '${SCAFADTelemetryBucket}/*'
+        
+        # SQS access for dead letter queue
+        - Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - sqs:SendMessage
+              Resource: !GetAtt SCAFADDeadLetterQueue.Arn
+        
+        # DynamoDB access for state management
+        - Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - dynamodb:GetItem
+                - dynamodb:PutItem
+                - dynamodb:UpdateItem
+                - dynamodb:Query
+                - dynamodb:Scan
+              Resource: 
+                - !GetAtt SCAFADStateTable.Arn
+                - !Sub '${SCAFADStateTable.Arn}/index/*'
+    
+    Metadata:
+      BuildMethod: python3.11
+      BuildProperties:
+        UseContainer: true  # Required for numpy/scipy dependencies
+        # Use the minimal Lambda requirements file (no PyTorch / Numba).
+        # Full deps (including optional ML) live in requirements.txt.
+        RequirementsFile: requirements.lambda.txt
+  
+  # API Gateway for direct invocations
+  SCAFADApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: !Sub 'scafad-api-${Stage}'
+      StageName: !Ref Stage
+      Description: SCAFAD Layer 0 API Gateway for telemetry ingestion
+      Cors:
+        AllowMethods: "'POST,OPTIONS'"
+        AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+        AllowOrigin: "'*'"
+      TracingEnabled: true
+      MethodSettings:
+        - ResourcePath: '/*'
+          HttpMethod: '*'
+          LoggingLevel: INFO
+          MetricsEnabled: true
+          DataTraceEnabled: true
+  
+  # S3 Bucket for telemetry data storage
+  SCAFADTelemetryBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub 'scafad-telemetry-${Stage}-${AWS::AccountId}'
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+          - Id: ArchiveOldTelemetry
+            Status: Enabled
+            Transitions:
+              - TransitionInDays: 30
+                StorageClass: STANDARD_IA
+              - TransitionInDays: 90
+                StorageClass: GLACIER
+          - Id: DeleteOldTelemetry
+            Status: Enabled
+            ExpirationInDays: 2555  # 7 years for compliance
+      NotificationConfiguration:
+        LambdaConfigurations:
+          - Event: s3:ObjectCreated:*
+            Function: !GetAtt SCAFADLayer0Function.Arn
+            Filter:
+              S3Key:
+                Rules:
+                  - Name: prefix
+                    Value: telemetry-logs/
+  
+  # DynamoDB Table for state management
+  SCAFADStateTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub 'scafad-state-${Stage}'
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: component_id
+          AttributeType: S
+        - AttributeName: timestamp
+          AttributeType: N
+        - AttributeName: state_type
+          AttributeType: S
+      KeySchema:
+        - AttributeName: component_id
+          KeyType: HASH
+        - AttributeName: timestamp
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        - IndexName: StateTypeIndex
+          KeySchema:
+            - AttributeName: state_type
+              KeyType: HASH
+            - AttributeName: timestamp
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+      TimeToLiveSpecification:
+        AttributeName: ttl
+        Enabled: true
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+      Tags:
+        - Key: Project
+          Value: SCAFAD
+        - Key: Stage
+          Value: !Ref Stage
+  
+  # Dead Letter Queue for failed invocations
+  SCAFADDeadLetterQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Sub 'scafad-dlq-${Stage}'
+      MessageRetentionPeriod: 1209600  # 14 days
+      VisibilityTimeoutSeconds: 300
+      KmsMasterKeyId: alias/aws/sqs
+      Tags:
+        - Key: Project
+          Value: SCAFAD
+        - Key: Stage
+          Value: !Ref Stage
+  
+  # CloudWatch Alarms for monitoring
+  SCAFADErrorAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub 'SCAFAD-Layer0-Errors-${Stage}'
+      AlarmDescription: Alert when SCAFAD Layer 0 function has errors
+      MetricName: Errors
+      Namespace: AWS/Lambda
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 2
+      Threshold: 5
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref SCAFADLayer0Function
+  
+  SCAFADDurationAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub 'SCAFAD-Layer0-Duration-${Stage}'
+      AlarmDescription: Alert when SCAFAD Layer 0 function duration is high
+      MetricName: Duration
+      Namespace: AWS/Lambda
+      Statistic: Average
+      Period: 300
+      EvaluationPeriods: 3
+      Threshold: 30000  # 30 seconds
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref SCAFADLayer0Function
+  
+  # Lambda Permission for S3
+  SCAFADLambdaInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref SCAFADLayer0Function
+      Action: lambda:InvokeFunction
+      Principal: s3.amazonaws.com
+      SourceArn: !Sub '${SCAFADTelemetryBucket}/*'
+
+Outputs:
+  # Function Information
+  SCAFADLayer0FunctionName:
+    Description: SCAFAD Layer 0 Lambda Function Name
+    Value: !Ref SCAFADLayer0Function
+    Export:
+      Name: !Sub '${AWS::StackName}-FunctionName'
+  
+  SCAFADLayer0FunctionArn:
+    Description: SCAFAD Layer 0 Lambda Function ARN
+    Value: !GetAtt SCAFADLayer0Function.Arn
+    Export:
+      Name: !Sub '${AWS::StackName}-FunctionArn'
+  
+  # API Gateway
+  SCAFADApiUrl:
+    Description: SCAFAD API Gateway URL
+    Value: !Sub 'https://${SCAFADApiGateway}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/scafad'
+    Export:
+      Name: !Sub '${AWS::StackName}-ApiUrl'
+  
+  # Storage
+  SCAFADTelemetryBucketName:
+    Description: SCAFAD Telemetry S3 Bucket Name
+    Value: !Ref SCAFADTelemetryBucket
+    Export:
+      Name: !Sub '${AWS::StackName}-TelemetryBucket'
+  
+  SCAFADStateTableName:
+    Description: SCAFAD State DynamoDB Table Name
+    Value: !Ref SCAFADStateTable
+    Export:
+      Name: !Sub '${AWS::StackName}-StateTable'
+  
+  # Monitoring
+  SCAFADDeadLetterQueueUrl:
+    Description: SCAFAD Dead Letter Queue URL
+    Value: !Ref SCAFADDeadLetterQueue
+    Export:
+      Name: !Sub '${AWS::StackName}-DLQUrl'
+  
+  # Testing
+  LocalInvokeCommand:
+    Description: Command to invoke locally with SAM
+    Value: !Sub 'sam local invoke SCAFADLayer0Function --event event.json'
+  
+  DeployCommand:
+    Description: Command to deploy to AWS
+    Value: !Sub 'sam deploy --guided --stack-name scafad-layer0-${Stage}'

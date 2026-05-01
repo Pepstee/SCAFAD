@@ -1,0 +1,445 @@
+{
+  "anomaly": "io_intensive",
+  "function_profile_id": "auth_service",
+  "execution_phase": "shutdown",
+  "concurrency_id": "CLH",
+  "invocation_timestamp": 1754703480.4655037,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0004",
+  "batch_id": "batch_1754703480_9507",
+  "seed": 42,
+  "invocation_index": 4,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": false,
+  "authentication_request": {
+    "username": "user_2381",
+    "auth_method": "api_key",
+    "client_id": "a1e5ac3a-6176-40d4-8179-9ea7509122ee",
+    "scopes": [
+      "write",
+      "read",
+      "delete"
+    ]
+  },
+  "session_config": {
+    "timeout": 3198,
+    "multi_factor": false,
+    "encryption_level": "high"
+  },
+  "io_operations": [
+    {
+      "type": "read",
+      "size": 350579
+    },
+    {
+      "type": "read",
+      "size": 612070
+    },
+    {
+      "type": "read",
+      "size": 962302
+    },
+    {
+      "type": "write",
+      "size": 326325
+    },
+    {
+      "type": "write",
+      "size": 136239
+    },
+    {
+      "type": "read",
+      "size": 325644
+    },
+    {
+      "type": "write",
+      "size": 675775
+    },
+    {
+      "type": "write",
+      "size": 853710
+    },
+    {
+      "type": "read",
+      "size": 703691
+    },
+    {
+      "type": "read",
+      "size": 678430
+    },
+    {
+      "type": "write",
+      "size": 534212
+    },
+    {
+      "type": "write",
+      "size": 20140
+    },
+    {
+      "type": "write",
+      "size": 324893
+    },
+    {
+      "type": "read",
+      "size": 998397
+    },
+    {
+      "type": "read",
+      "size": 359356
+    },
+    {
+      "type": "write",
+      "size": 202356
+    },
+    {
+      "type": "read",
+      "size": 145271
+    },
+    {
+      "type": "read",
+      "size": 81937
+    },
+    {
+      "type": "write",
+      "size": 886471
+    },
+    {
+      "type": "read",
+      "size": 533375
+    },
+    {
+      "type": "read",
+      "size": 695107
+    },
+    {
+      "type": "write",
+      "size": 919988
+    },
+    {
+      "type": "read",
+      "size": 627282
+    },
+    {
+      "type": "write",
+      "size": 162769
+    },
+    {
+      "type": "read",
+      "size": 190654
+    },
+    {
+      "type": "read",
+      "size": 757239
+    },
+    {
+      "type": "write",
+      "size": 46838
+    },
+    {
+      "type": "write",
+      "size": 383019
+    },
+    {
+      "type": "read",
+      "size": 1017711
+    },
+    {
+      "type": "write",
+      "size": 641279
+    },
+    {
+      "type": "write",
+      "size": 789963
+    },
+    {
+      "type": "write",
+      "size": 246393
+    },
+    {
+      "type": "read",
+      "size": 325524
+    },
+    {
+      "type": "write",
+      "size": 948909
+    },
+    {
+      "type": "read",
+      "size": 386733
+    },
+    {
+      "type": "write",
+      "size": 485130
+    },
+    {
+      "type": "write",
+      "size": 816946
+    },
+    {
+      "type": "write",
+      "size": 528359
+    },
+    {
+      "type": "write",
+      "size": 1014229
+    },
+    {
+      "type": "read",
+      "size": 857596
+    },
+    {
+      "type": "read",
+      "size": 841205
+    },
+    {
+      "type": "read",
+      "size": 916432
+    },
+    {
+      "type": "write",
+      "size": 55738
+    },
+    {
+      "type": "write",
+      "size": 917602
+    },
+    {
+      "type": "write",
+      "size": 582502
+    },
+    {
+      "type": "read",
+      "size": 746981
+    },
+    {
+      "type": "read",
+      "size": 299934
+    },
+    {
+      "type": "read",
+      "size": 801209
+    },
+    {
+      "type": "read",
+      "size": 287066
+    },
+    {
+      "type": "write",
+      "size": 950306
+    },
+    {
+      "type": "read",
+      "size": 872439
+    },
+    {
+      "type": "write",
+      "size": 97192
+    },
+    {
+      "type": "read",
+      "size": 857399
+    },
+    {
+      "type": "write",
+      "size": 928625
+    },
+    {
+      "type": "write",
+      "size": 976694
+    },
+    {
+      "type": "read",
+      "size": 436074
+    },
+    {
+      "type": "read",
+      "size": 416736
+    },
+    {
+      "type": "write",
+      "size": 248255
+    },
+    {
+      "type": "write",
+      "size": 1043859
+    },
+    {
+      "type": "read",
+      "size": 394148
+    },
+    {
+      "type": "read",
+      "size": 30580
+    },
+    {
+      "type": "write",
+      "size": 977065
+    },
+    {
+      "type": "read",
+      "size": 880964
+    },
+    {
+      "type": "write",
+      "size": 830846
+    },
+    {
+      "type": "read",
+      "size": 145307
+    },
+    {
+      "type": "read",
+      "size": 301838
+    },
+    {
+      "type": "write",
+      "size": 730908
+    },
+    {
+      "type": "read",
+      "size": 796726
+    },
+    {
+      "type": "write",
+      "size": 471416
+    },
+    {
+      "type": "read",
+      "size": 950884
+    },
+    {
+      "type": "read",
+      "size": 20951
+    },
+    {
+      "type": "write",
+      "size": 227154
+    },
+    {
+      "type": "read",
+      "size": 576486
+    },
+    {
+      "type": "write",
+      "size": 117611
+    },
+    {
+      "type": "write",
+      "size": 250207
+    },
+    {
+      "type": "write",
+      "size": 128791
+    },
+    {
+      "type": "read",
+      "size": 251045
+    },
+    {
+      "type": "write",
+      "size": 671013
+    },
+    {
+      "type": "write",
+      "size": 66882
+    },
+    {
+      "type": "read",
+      "size": 878354
+    },
+    {
+      "type": "write",
+      "size": 626750
+    },
+    {
+      "type": "read",
+      "size": 663676
+    },
+    {
+      "type": "read",
+      "size": 754472
+    },
+    {
+      "type": "read",
+      "size": 306444
+    },
+    {
+      "type": "write",
+      "size": 2664
+    },
+    {
+      "type": "write",
+      "size": 253273
+    },
+    {
+      "type": "write",
+      "size": 197436
+    },
+    {
+      "type": "read",
+      "size": 549937
+    },
+    {
+      "type": "write",
+      "size": 71990
+    },
+    {
+      "type": "read",
+      "size": 410444
+    },
+    {
+      "type": "write",
+      "size": 46673
+    },
+    {
+      "type": "write",
+      "size": 1029718
+    },
+    {
+      "type": "write",
+      "size": 266995
+    },
+    {
+      "type": "read",
+      "size": 375464
+    }
+  ],
+  "io_pattern": "sequential",
+  "execution_environment": {
+    "region": "eu-west-1",
+    "availability_zone": "a",
+    "runtime": "python3.9",
+    "memory_allocation": 1024,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 13.48760740809996,
+    "max_memory_mb": 906,
+    "expected_latency": 0.9842367810966413
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_0ea6ca96-8e40-4cda-8b0c-1af3d20c67fa",
+  "parent_invocation": null,
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T02:38:00.465503",
+    "mode": "test",
+    "total_invocations": 5,
+    "invocation_index": 4,
+    "anomaly_category": "synthetic"
+  },
+  "graph_analysis": true,
+  "graph_type": "circular_dependency",
+  "graph_config": {
+    "node_count": 1,
+    "edge_count": 0,
+    "topology": "isolated"
+  },
+  "analysis_depth": 3,
+  "enable_clustering": false,
+  "temporal_analysis": true
+}

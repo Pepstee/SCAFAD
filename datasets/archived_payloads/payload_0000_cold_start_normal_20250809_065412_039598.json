@@ -1,0 +1,37 @@
+{
+  "anomaly": "cold_start",
+  "function_profile_id": "ml_inference",
+  "execution_phase": "shutdown",
+  "concurrency_id": "HFT",
+  "invocation_timestamp": 1754718852.038598,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0000",
+  "batch_id": "batch_1754718852_9935",
+  "seed": 42,
+  "invocation_index": 0,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": false,
+  "enable_adversarial_detection": false,
+  "execution_environment": {
+    "region": "eu-west-1",
+    "runtime": "python3.11",
+    "memory_allocation": 1024,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 1.921697704971724,
+    "max_memory_mb": 159,
+    "expected_latency": 1.1713260765376567
+  },
+  "force_starvation": false,
+  "metadata": {
+    "generator": "scafad_sam_invoke.py",
+    "generation_time": "2025-08-09T06:54:12.038598",
+    "mode": "test",
+    "total_invocations": 5,
+    "invocation_index": 0
+  }
+}

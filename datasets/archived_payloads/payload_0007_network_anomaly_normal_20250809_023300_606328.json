@@ -1,0 +1,154 @@
+{
+  "anomaly": "network_anomaly",
+  "function_profile_id": "api_gateway",
+  "execution_phase": "shutdown",
+  "concurrency_id": "LGE",
+  "invocation_timestamp": 1754702991.2554576,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0007",
+  "batch_id": "batch_1754702991_6892",
+  "seed": 42,
+  "invocation_index": 7,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": false,
+  "enable_adversarial_detection": false,
+  "httpMethod": "PATCH",
+  "path": "/api/v2/users",
+  "headers": {
+    "Content-Type": "text/plain",
+    "Authorization": "Bearer 87b29b27-3e45-4165-b2d0-6cf96099d2f7",
+    "User-Agent": "SCAFAD-Test-Client/1.2",
+    "X-API-Key": "a1324603d9b1a22277809229934a36fd"
+  },
+  "queryStringParameters": {
+    "limit": "103",
+    "offset": "8361",
+    "sort": "desc",
+    "filter": "active"
+  },
+  "body": "{\"action\": \"query\", \"data\": {\"id\": 17295, \"timestamp\": 1754702991.2554576}}",
+  "network_calls": [
+    {
+      "url": "https://api0.example.com/endpoint",
+      "timeout": 2,
+      "retries": 2
+    },
+    {
+      "url": "https://api1.example.com/endpoint",
+      "timeout": 13,
+      "retries": 5
+    },
+    {
+      "url": "https://api2.example.com/endpoint",
+      "timeout": 20,
+      "retries": 4
+    },
+    {
+      "url": "https://api3.example.com/endpoint",
+      "timeout": 2,
+      "retries": 0
+    },
+    {
+      "url": "https://api4.example.com/endpoint",
+      "timeout": 7,
+      "retries": 4
+    },
+    {
+      "url": "https://api5.example.com/endpoint",
+      "timeout": 24,
+      "retries": 5
+    },
+    {
+      "url": "https://api6.example.com/endpoint",
+      "timeout": 18,
+      "retries": 1
+    },
+    {
+      "url": "https://api7.example.com/endpoint",
+      "timeout": 16,
+      "retries": 1
+    },
+    {
+      "url": "https://api8.example.com/endpoint",
+      "timeout": 28,
+      "retries": 2
+    },
+    {
+      "url": "https://api9.example.com/endpoint",
+      "timeout": 10,
+      "retries": 0
+    },
+    {
+      "url": "https://api10.example.com/endpoint",
+      "timeout": 7,
+      "retries": 1
+    },
+    {
+      "url": "https://api11.example.com/endpoint",
+      "timeout": 24,
+      "retries": 0
+    },
+    {
+      "url": "https://api12.example.com/endpoint",
+      "timeout": 24,
+      "retries": 3
+    },
+    {
+      "url": "https://api13.example.com/endpoint",
+      "timeout": 30,
+      "retries": 1
+    },
+    {
+      "url": "https://api14.example.com/endpoint",
+      "timeout": 23,
+      "retries": 4
+    },
+    {
+      "url": "https://api15.example.com/endpoint",
+      "timeout": 23,
+      "retries": 1
+    },
+    {
+      "url": "https://api16.example.com/endpoint",
+      "timeout": 13,
+      "retries": 1
+    }
+  ],
+  "network_pattern": "intermittent",
+  "execution_environment": {
+    "region": "ap-southeast-1",
+    "availability_zone": "b",
+    "runtime": "python3.11",
+    "memory_allocation": 3008,
+    "architecture": "arm64"
+  },
+  "performance_targets": {
+    "max_duration": 23.087240109981625,
+    "max_memory_mb": 391,
+    "expected_latency": 4.580219444597696
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_caa5ffc0-b6ca-4d99-89e1-02d84f9dad34",
+  "parent_invocation": null,
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T02:29:51.255457",
+    "mode": "test",
+    "total_invocations": 10,
+    "invocation_index": 7,
+    "anomaly_category": "synthetic"
+  },
+  "graph_analysis": true,
+  "graph_type": "complex_chain",
+  "graph_config": {
+    "node_count": 9,
+    "edge_count": 4,
+    "topology": "linear"
+  },
+  "analysis_depth": 2,
+  "enable_clustering": false,
+  "temporal_analysis": true
+}

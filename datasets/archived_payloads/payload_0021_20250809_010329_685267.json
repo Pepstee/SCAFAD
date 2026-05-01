@@ -1,0 +1,55 @@
+{
+  "anomaly": "cold_start",
+  "function_profile_id": "data_processor",
+  "execution_phase": "invoke",
+  "concurrency_id": "OVE",
+  "invocation_timestamp": 1754697798.9609745,
+  "test_mode": true,
+  "payload_id": "scafad_invoke_0021",
+  "batch_id": "batch_1754697798",
+  "seed": 42,
+  "Records": [
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket"
+        },
+        "object": {
+          "key": "data/input_8612.json"
+        }
+      }
+    }
+  ],
+  "processing_config": {
+    "batch_size": 812,
+    "format": "csv"
+  },
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "force_starvation": false,
+  "metadata": {
+    "generator": "enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:03:18.960974",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 21
+  },
+  "enable_adversarial": true,
+  "attack_type": "billing_attack",
+  "adversarial_intensity": 0.6,
+  "adversarial_metadata": {
+    "target": "data_processor",
+    "expected_impact": "medium",
+    "evasion_strategy": "burst"
+  },
+  "execution_environment": {
+    "region": "ap-southeast-1",
+    "availability_zone": "b",
+    "runtime": "python3.10",
+    "memory_allocation": 128
+  }
+}

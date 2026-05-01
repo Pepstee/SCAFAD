@@ -1,0 +1,26 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [
+    "legacy/",
+    "__pycache__",
+]
+
+[tool.ruff.lint]
+# Minimal rule set for new files: pyflakes + pycodestyle essentials
+select = ["E", "F", "W"]
+ignore = [
+    "E501",   # line too long -- handled by formatter
+    "E402",   # module-level import not at top (common in test files)
+    "F401",   # imported but unused (many __init__.py re-exports)
+    "F403",   # star import (legacy layer0 modules use wildcard exports)
+    "F405",   # may be undefined from star import
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100

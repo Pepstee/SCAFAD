@@ -1,0 +1,82 @@
+{
+  "anomaly": "adversarial_injection",
+  "function_profile_id": "notification_service",
+  "execution_phase": "shutdown",
+  "concurrency_id": "GSR",
+  "invocation_timestamp": 1754699759.3349218,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0017",
+  "batch_id": "batch_1754699759_4288",
+  "seed": 42,
+  "invocation_index": 17,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": true,
+  "generic_data": {
+    "type": "notification_service",
+    "data": "test_data_4199"
+  },
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:35:59.334921",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 17,
+    "anomaly_category": "synthetic"
+  },
+  "injection_type": "payload",
+  "attack_vector": "adaptive",
+  "evasion_technique": "encoding",
+  "execution_environment": {
+    "region": "eu-west-1",
+    "availability_zone": "a",
+    "runtime": "python3.10",
+    "memory_allocation": 3008,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 2.9313359802269128,
+    "max_memory_mb": 740,
+    "expected_latency": 1.429420857493654
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_01ca61d7-87e6-4ade-a0a3-de3dd7a5d2aa",
+  "parent_invocation": null,
+  "graph_analysis": true,
+  "graph_type": "circular_dependency",
+  "graph_config": {
+    "node_count": 1,
+    "edge_count": 0,
+    "topology": "isolated"
+  },
+  "analysis_depth": 5,
+  "enable_clustering": true,
+  "temporal_analysis": true,
+  "enable_adversarial": true,
+  "attack_type": "cpu_exhaustion",
+  "adversarial_intensity": 0.604618787271641,
+  "adversarial_metadata": {
+    "target": "notification_service",
+    "expected_impact": "low",
+    "evasion_strategy": "gradual",
+    "attack_complexity": "moderate",
+    "detection_avoidance": false
+  },
+  "attack_payload": {
+    "injection_points": 3,
+    "obfuscation_level": 0.48993284548371885,
+    "polymorphic": true
+  },
+  "economic_attack": "init_spam",
+  "cost_impact_target": 9.851386131293534,
+  "billing_abuse_type": "invocation_count",
+  "economic_metadata": {
+    "attack_duration": 1027,
+    "resource_amplification": 9.967955289974466,
+    "cost_optimization_bypass": false,
+    "billing_cycle_exploitation": true
+  }
+}

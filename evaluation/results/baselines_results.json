@@ -1,0 +1,258 @@
+{
+  "generated_at": "2026-04-24T19:32:47.160437+00:00",
+  "dataset": "datasets/synthetic_eval_dataset.json.gz",
+  "evaluation_protocol": "one-class: trained on benign-only records",
+  "train_records": 200,
+  "test_records": 6300,
+  "test_anomaly_rate": 0.992063,
+  "features": [
+    "duration",
+    "memory_spike_kb",
+    "cpu_utilization",
+    "network_io_bytes"
+  ],
+  "total_evaluation_time_s": 2.978,
+  "models": [
+    {
+      "name": "ZScore (threshold=3.0)",
+      "precision": 1.0,
+      "recall": 0.7256,
+      "f1": 0.840983,
+      "roc_auc": 0.895421,
+      "train_time_s": 0.000172,
+      "infer_time_s": 0.000407,
+      "model_parameters": {
+        "threshold": 3.0,
+        "means": [
+          0.2737410181653019,
+          285.135,
+          24.503835062862862,
+          4395.45
+        ],
+        "stds": [
+          0.1291927176443852,
+          122.50525203027007,
+          11.845975956037469,
+          2147.850976557732
+        ]
+      }
+    },
+    {
+      "name": "ZScore (threshold=2.5)",
+      "precision": 1.0,
+      "recall": 0.73488,
+      "f1": 0.847183,
+      "roc_auc": 0.895421,
+      "train_time_s": 0.000119,
+      "infer_time_s": 0.0003,
+      "model_parameters": {
+        "threshold": 2.5,
+        "means": [
+          0.2737410181653019,
+          285.135,
+          24.503835062862862,
+          4395.45
+        ],
+        "stds": [
+          0.1291927176443852,
+          122.50525203027007,
+          11.845975956037469,
+          2147.850976557732
+        ]
+      }
+    },
+    {
+      "name": "IQR (multiplier=1.5)",
+      "precision": 1.0,
+      "recall": 0.71824,
+      "f1": 0.836018,
+      "roc_auc": 0.85912,
+      "train_time_s": 0.000302,
+      "infer_time_s": 0.000943,
+      "model_parameters": {
+        "iqr_multiplier": 1.5,
+        "q1": [
+          0.1577887988913857,
+          191.25,
+          14.185097592374763,
+          2698.5
+        ],
+        "q3": [
+          0.3833448499902069,
+          381.25,
+          34.895480062131455,
+          6299.75
+        ],
+        "iqr": [
+          0.2255560510988212,
+          190.0,
+          20.71038246975669,
+          3601.25
+        ]
+      }
+    },
+    {
+      "name": "IQR (multiplier=2.0)",
+      "precision": 1.0,
+      "recall": 0.70064,
+      "f1": 0.823972,
+      "roc_auc": 0.85032,
+      "train_time_s": 0.00022,
+      "infer_time_s": 0.000542,
+      "model_parameters": {
+        "iqr_multiplier": 2.0,
+        "q1": [
+          0.1577887988913857,
+          191.25,
+          14.185097592374763,
+          2698.5
+        ],
+        "q3": [
+          0.3833448499902069,
+          381.25,
+          34.895480062131455,
+          6299.75
+        ],
+        "iqr": [
+          0.2255560510988212,
+          190.0,
+          20.71038246975669,
+          3601.25
+        ]
+      }
+    },
+    {
+      "name": "MovingAverage (w=10)",
+      "precision": 0.994439,
+      "recall": 0.31472,
+      "f1": 0.478123,
+      "roc_auc": 0.453107,
+      "train_time_s": 6e-06,
+      "infer_time_s": 0.168268,
+      "model_parameters": {
+        "window_size": 10,
+        "std_multiplier": 2.0
+      }
+    },
+    {
+      "name": "IsolationForest (n=100, cont=0.10)",
+      "precision": 0.99752,
+      "recall": 0.77232,
+      "f1": 0.870592,
+      "roc_auc": 0.86424,
+      "train_time_s": 0.209014,
+      "infer_time_s": 0.072591,
+      "model_parameters": {
+        "contamination": 0.1,
+        "n_estimators": 100,
+        "random_state": 42
+      }
+    },
+    {
+      "name": "IsolationForest (n=200, cont=0.05)",
+      "precision": 0.999104,
+      "recall": 0.71328,
+      "f1": 0.832338,
+      "roc_auc": 0.867907,
+      "train_time_s": 0.326827,
+      "infer_time_s": 0.125046,
+      "model_parameters": {
+        "contamination": 0.05,
+        "n_estimators": 200,
+        "random_state": 42
+      }
+    },
+    {
+      "name": "OneClassSVM (nu=0.10)",
+      "precision": 0.998395,
+      "recall": 0.796,
+      "f1": 0.885783,
+      "roc_auc": 0.889494,
+      "train_time_s": 0.00126,
+      "infer_time_s": 0.022735,
+      "model_parameters": {
+        "gamma": "scale",
+        "nu": 0.1
+      }
+    },
+    {
+      "name": "OneClassSVM (nu=0.05)",
+      "precision": 0.998991,
+      "recall": 0.792,
+      "f1": 0.883534,
+      "roc_auc": 0.890861,
+      "train_time_s": 0.000965,
+      "infer_time_s": 0.020037,
+      "model_parameters": {
+        "gamma": "auto",
+        "nu": 0.05
+      }
+    },
+    {
+      "name": "LocalOutlierFactor (k=20, cont=0.10)",
+      "precision": 0.999176,
+      "recall": 0.776,
+      "f1": 0.873559,
+      "roc_auc": 0.890384,
+      "train_time_s": 0.002543,
+      "infer_time_s": 0.041154,
+      "model_parameters": {
+        "n_neighbors": 20,
+        "contamination": 0.1
+      }
+    },
+    {
+      "name": "LocalOutlierFactor (k=10, cont=0.05)",
+      "precision": 0.999168,
+      "recall": 0.76864,
+      "f1": 0.868873,
+      "roc_auc": 0.88719,
+      "train_time_s": 0.001644,
+      "infer_time_s": 0.0257,
+      "model_parameters": {
+        "n_neighbors": 10,
+        "contamination": 0.05
+      }
+    },
+    {
+      "name": "DBSCAN (eps=0.5, min_samples=5)",
+      "precision": 1.0,
+      "recall": 0.04688,
+      "f1": 0.089561,
+      "roc_auc": 0.881971,
+      "train_time_s": 0.001676,
+      "infer_time_s": 0.000601,
+      "model_parameters": {
+        "eps": 0.5,
+        "min_samples": 5,
+        "num_clusters": 1
+      }
+    },
+    {
+      "name": "EllipticEnvelope (cont=0.10)",
+      "precision": 0.998748,
+      "recall": 0.76592,
+      "f1": 0.866975,
+      "roc_auc": 0.884739,
+      "train_time_s": 0.031069,
+      "infer_time_s": 0.000973,
+      "model_parameters": {
+        "contamination": 0.1
+      }
+    },
+    {
+      "name": "KMeans (k=5)",
+      "precision": 0.999787,
+      "recall": 0.75056,
+      "f1": 0.85743,
+      "roc_auc": 0.8844,
+      "train_time_s": 1.785423,
+      "infer_time_s": 0.003246,
+      "model_parameters": {
+        "n_clusters": 5,
+        "threshold_std_multiplier": 2.0,
+        "fitted_threshold": 2.2159682673830554
+      }
+    }
+  ]
+}

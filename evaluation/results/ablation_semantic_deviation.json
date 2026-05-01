@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-05-01T07:33:51.153410Z",
+  "n_records": 250,
+  "n_benign": 50,
+  "n_anomaly": 200,
+  "n_classes": 25,
+  "ablated": {
+    "roc_auc": 0.9045,
+    "default_threshold": {
+      "threshold": 0.3,
+      "f1": 0.00995,
+      "precision": 1.0,
+      "recall": 0.005
+    },
+    "calibrated_threshold": {
+      "threshold": 0.06,
+      "f1": 0.876404,
+      "precision": 1.0,
+      "recall": 0.78
+    },
+    "score_distribution": {
+      "benign_min": 0.0083,
+      "benign_max": 0.0584,
+      "benign_mean": 0.0305,
+      "anomaly_min": 0.0115,
+      "anomaly_max": 0.3299,
+      "anomaly_mean": 0.1202
+    }
+  },
+  "standard": {
+    "roc_auc": 1.0,
+    "default_threshold": {
+      "f1": 0.7238
+    },
+    "calibrated_threshold": {
+      "threshold": 0.09,
+      "f1": 1.0
+    },
+    "source": "scafad_results.json"
+  },
+  "best_baseline": {
+    "name": "ZScore nu=3.0",
+    "roc_auc": 0.8954
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "anomaly": "execution_failure",
+  "function_profile_id": "data_processor",
+  "execution_phase": "shutdown",
+  "concurrency_id": "WMB",
+  "invocation_timestamp": 1754697798.9609745,
+  "test_mode": true,
+  "payload_id": "scafad_invoke_0011",
+  "batch_id": "batch_1754697798",
+  "seed": 42,
+  "Records": [
+    {
+      "eventSource": "aws:s3",
+      "s3": {
+        "bucket": {
+          "name": "data-lake-bucket"
+        },
+        "object": {
+          "key": "data/input_9494.json"
+        }
+      }
+    }
+  ],
+  "processing_config": {
+    "batch_size": 470,
+    "format": "parquet"
+  },
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "force_starvation": false,
+  "metadata": {
+    "generator": "enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:03:18.960974",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 11
+  },
+  "execution_environment": {
+    "region": "ap-southeast-1",
+    "availability_zone": "a",
+    "runtime": "python3.9",
+    "memory_allocation": 256
+  }
+}

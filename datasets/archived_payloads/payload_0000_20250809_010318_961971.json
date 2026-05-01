@@ -1,0 +1,92 @@
+{
+  "anomaly": "network_anomaly",
+  "function_profile_id": "ml_inference",
+  "execution_phase": "init",
+  "concurrency_id": "TGD",
+  "invocation_timestamp": 1754697798.9599586,
+  "test_mode": true,
+  "payload_id": "scafad_invoke_0000",
+  "batch_id": "batch_1754697798",
+  "seed": 42,
+  "model_name": "model_regression",
+  "input_data": {
+    "features": [
+      0.5904925124490397,
+      0.03178267948178359,
+      0.09369523986159245,
+      0.2326608933907396,
+      0.6020187290499803,
+      0.561245062938613,
+      0.7160196129224035,
+      0.7013249735902359,
+      0.41951982096165874,
+      0.4492090462838536,
+      0.2781907082306627,
+      0.869300320792934,
+      0.7588073671297673,
+      0.15965931637689013,
+      0.42261439815350255
+    ],
+    "metadata": {
+      "version": "v1.2",
+      "timestamp": 1754697798.9599586
+    }
+  },
+  "inference_config": {
+    "batch_inference": false,
+    "confidence_threshold": 0.7388698749529453
+  },
+  "network_calls": [
+    {
+      "url": "https://api0.example.com",
+      "timeout": 19
+    },
+    {
+      "url": "https://api1.example.com",
+      "timeout": 7
+    },
+    {
+      "url": "https://api2.example.com",
+      "timeout": 23
+    },
+    {
+      "url": "https://api3.example.com",
+      "timeout": 3
+    },
+    {
+      "url": "https://api4.example.com",
+      "timeout": 2
+    },
+    {
+      "url": "https://api5.example.com",
+      "timeout": 22
+    },
+    {
+      "url": "https://api6.example.com",
+      "timeout": 8
+    },
+    {
+      "url": "https://api7.example.com",
+      "timeout": 25
+    }
+  ],
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "force_starvation": false,
+  "metadata": {
+    "generator": "enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:03:18.959958",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 0
+  },
+  "execution_environment": {
+    "region": "ap-southeast-1",
+    "availability_zone": "b",
+    "runtime": "python3.10",
+    "memory_allocation": 512
+  }
+}

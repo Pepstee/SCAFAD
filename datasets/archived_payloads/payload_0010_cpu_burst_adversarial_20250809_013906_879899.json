@@ -1,0 +1,65 @@
+{
+  "anomaly": "cpu_burst",
+  "function_profile_id": "cache_manager",
+  "execution_phase": "invoke",
+  "concurrency_id": "SQD",
+  "invocation_timestamp": 1754699759.3323843,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0010",
+  "batch_id": "batch_1754699759_5835",
+  "seed": 42,
+  "invocation_index": 10,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": true,
+  "generic_data": {
+    "type": "cache_manager",
+    "data": "test_data_4068"
+  },
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:35:59.332384",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 10,
+    "anomaly_category": "synthetic"
+  },
+  "computational_task": {
+    "iterations": 435476,
+    "complexity": "high",
+    "algorithm": "sorting"
+  },
+  "execution_environment": {
+    "region": "ap-southeast-1",
+    "availability_zone": "b",
+    "runtime": "python3.9",
+    "memory_allocation": 1024,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 3.5439249807112168,
+    "max_memory_mb": 456,
+    "expected_latency": 0.7724564839471175
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_4114016b-69a5-4556-a5c3-2f47eb0ef921",
+  "parent_invocation": null,
+  "enable_adversarial": true,
+  "attack_type": "network_flooding",
+  "adversarial_intensity": 0.8153616198716832,
+  "adversarial_metadata": {
+    "target": "cache_manager",
+    "expected_impact": "critical",
+    "evasion_strategy": "stealth",
+    "attack_complexity": "sophisticated",
+    "detection_avoidance": false
+  },
+  "attack_payload": {
+    "injection_points": 3,
+    "obfuscation_level": 0.912677016598367,
+    "polymorphic": false
+  }
+}

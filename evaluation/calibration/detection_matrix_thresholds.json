@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "description": "Threshold calibration for MultiVectorDetectionMatrix (WP-3.6, DL-033)",
+    "calibration_date": "2026-04-20",
+    "method": "synthetic benchmark — benign/anomalous record pairs",
+    "anomaly_indicated_threshold": 0.3,
+    "note": "aggregate_score >= 0.3 triggers anomaly_indicated=True"
+  },
+  "detectors": {
+    "rule_chain": {
+      "confidence": 0.70,
+      "thresholds": {
+        "duration_ms": 1.0,
+        "memory_spike_kb": 131072,
+        "cpu_utilization": 80.0,
+        "network_io_bytes": 4096
+      },
+      "score_weights": {
+        "duration": 0.20,
+        "memory": 0.30,
+        "cpu": 0.25,
+        "network": 0.15
+      }
+    },
+    "drift_tracker": {
+      "confidence": 0.65,
+      "score_weights": {
+        "per_drift_marker": 0.25,
+        "economic_risk": 0.25,
+        "silent_failure": 0.25,
+        "incompleteness": 0.15
+      }
+    },
+    "graph_immunized": {
+      "confidence": 0.60,
+      "score_weights": {
+        "density_divisor": 8.0,
+        "causal_depth_per_hop": 0.05,
+        "causal_depth_cap": 0.25
+      }
+    },
+    "semantic_deviation": {
+      "confidence": 0.75,
+      "score_weights": {
+        "non_benign_anomaly_type": 0.45,
+        "suspicious_token_match": 0.35,
+        "sensitive_execution_phase": 0.10,
+        "sensitive_anomaly_category": 0.10,
+        "high_severity": 0.10
+      },
+      "suspicious_tokens": ["spike", "drift", "timeout", "injection", "exfiltration"],
+      "sensitive_categories": ["security", "silent_failure", "execution"],
+      "severity_threshold": 7
+    }
+  },
+  "aggregate": {
+    "method": "unweighted_mean",
+    "anomaly_indicated_threshold": 0.3,
+    "consensus_positive_threshold": 0.3
+  },
+  "synthetic_benchmarks": [
+    {
+      "scenario": "benign_low_load",
+      "anomaly_type": "benign",
+      "telemetry": {"l0_cpu_utilization": 5.0, "l0_memory_spike_kb": 256, "l0_duration_ms": 10.0},
+      "expected_anomaly_indicated": false,
+      "expected_aggregate_score_lt": 0.3
+    },
+    {
+      "scenario": "memory_spike_high_cpu",
+      "anomaly_type": "memory_spike",
+      "telemetry": {"l0_cpu_utilization": 95.0, "l0_memory_spike_kb": 524288, "l0_duration_ms": 5000.0},
+      "expected_anomaly_indicated": true,
+      "expected_aggregate_score_gte": 0.3
+    },
+    {
+      "scenario": "drift_economic_risk",
+      "anomaly_type": "benign",
+      "context": {"economic_risk_score": 0.9, "silent_failure_probability": 0.7},
+      "expected_anomaly_indicated": true,
+      "expected_aggregate_score_gte": 0.3
+    }
+  ]
+}

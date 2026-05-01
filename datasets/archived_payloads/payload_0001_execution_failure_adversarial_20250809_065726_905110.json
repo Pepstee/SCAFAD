@@ -1,0 +1,45 @@
+{
+  "anomaly": "execution_failure",
+  "function_profile_id": "auth_service",
+  "execution_phase": "shutdown",
+  "concurrency_id": "QOF",
+  "invocation_timestamp": 1754719028.3550837,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0001",
+  "batch_id": "batch_1754719028_5557",
+  "seed": 42,
+  "invocation_index": 1,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": false,
+  "enable_adversarial_detection": true,
+  "execution_environment": {
+    "region": "us-east-1",
+    "runtime": "python3.11",
+    "memory_allocation": 1024,
+    "architecture": "x86_64"
+  },
+  "performance_targets": {
+    "max_duration": 10.867264979021764,
+    "max_memory_mb": 223,
+    "expected_latency": 1.1550374343271852
+  },
+  "force_starvation": false,
+  "metadata": {
+    "generator": "scafad_sam_invoke.py",
+    "generation_time": "2025-08-09T06:57:08.355083",
+    "mode": "test",
+    "total_invocations": 3,
+    "invocation_index": 1
+  },
+  "enable_adversarial": true,
+  "attack_type": "memory_bomb",
+  "adversarial_intensity": 0.1870447391501176,
+  "adversarial_metadata": {
+    "target": "auth_service",
+    "expected_impact": "medium",
+    "evasion_strategy": "stealth"
+  }
+}

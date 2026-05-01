@@ -1,0 +1,79 @@
+{
+  "anomaly": "network_anomaly",
+  "function_profile_id": "api_gateway",
+  "execution_phase": "shutdown",
+  "concurrency_id": "OKV",
+  "invocation_timestamp": 1754697798.9599586,
+  "test_mode": true,
+  "payload_id": "scafad_invoke_0006",
+  "batch_id": "batch_1754697798",
+  "seed": 42,
+  "httpMethod": "DELETE",
+  "path": "/api/v1/analytics",
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 4eec21c1-516d-43dc-a0f5-fb4511ccdf91",
+    "User-Agent": "SCAFAD-Test-Client/1.0"
+  },
+  "queryStringParameters": {
+    "limit": "30",
+    "offset": "761"
+  },
+  "body": "{\"action\": \"query\", \"data\": {\"id\": 7374}}",
+  "network_calls": [
+    {
+      "url": "https://api0.example.com",
+      "timeout": 11
+    },
+    {
+      "url": "https://api1.example.com",
+      "timeout": 29
+    },
+    {
+      "url": "https://api2.example.com",
+      "timeout": 18
+    },
+    {
+      "url": "https://api3.example.com",
+      "timeout": 3
+    },
+    {
+      "url": "https://api4.example.com",
+      "timeout": 5
+    },
+    {
+      "url": "https://api5.example.com",
+      "timeout": 5
+    },
+    {
+      "url": "https://api6.example.com",
+      "timeout": 8
+    },
+    {
+      "url": "https://api7.example.com",
+      "timeout": 13
+    }
+  ],
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "force_starvation": false,
+  "metadata": {
+    "generator": "enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:03:18.959958",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 6
+  },
+  "economic_attack": "data_exfiltration",
+  "cost_impact_target": 4.31249182382371,
+  "billing_abuse_type": "memory",
+  "execution_environment": {
+    "region": "us-west-2",
+    "availability_zone": "b",
+    "runtime": "python3.10",
+    "memory_allocation": 2048
+  }
+}

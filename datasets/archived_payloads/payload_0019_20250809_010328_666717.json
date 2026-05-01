@@ -1,0 +1,62 @@
+{
+  "anomaly": "execution_failure",
+  "function_profile_id": "ml_inference",
+  "execution_phase": "shutdown",
+  "concurrency_id": "UVW",
+  "invocation_timestamp": 1754697798.9609745,
+  "test_mode": true,
+  "payload_id": "scafad_invoke_0019",
+  "batch_id": "batch_1754697798",
+  "seed": 42,
+  "model_name": "model_regression",
+  "input_data": {
+    "features": [
+      0.5972464410716285,
+      0.15425276132112153,
+      0.1808459671686966,
+      0.6928456408612267,
+      0.6247404799539127,
+      0.9026559827144381,
+      0.721182997805427,
+      0.043692427954514335,
+      0.36429941413076905,
+      0.71958567379065,
+      0.969588603408625,
+      0.6105954221258157,
+      0.752391165111486,
+      0.7838003594348427,
+      0.23400294433542446,
+      0.23916849724551947,
+      0.9655966371940364,
+      0.7843702395932048
+    ],
+    "metadata": {
+      "version": "v1.2",
+      "timestamp": 1754697798.9609745
+    }
+  },
+  "inference_config": {
+    "batch_inference": true,
+    "confidence_threshold": 0.7919602395562582
+  },
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "force_starvation": false,
+  "metadata": {
+    "generator": "enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:03:18.960974",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 19
+  },
+  "parent_chain": "parent_chain_2374",
+  "execution_environment": {
+    "region": "us-west-2",
+    "availability_zone": "b",
+    "runtime": "python3.10",
+    "memory_allocation": 2048
+  }
+}

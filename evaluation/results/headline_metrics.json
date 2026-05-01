@@ -1,0 +1,161 @@
+{
+  "generated_at": "2026-04-30T14:29:02.902280+00:00",
+  "task": "WP-4.1",
+  "description": "SCAFAD reproducible evaluation harness \u2014 all dissertation numbers",
+  "dataset": "datasets/synthetic_eval_dataset.json.gz",
+  "seed": 42,
+  "cache_used": true,
+  "scafad": {
+    "name": "SCAFAD (full pipeline L0\u2192L5)",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": {
+      "tn": 50,
+      "fp": 0,
+      "fn": 0,
+      "tp": 6250,
+      "labels": [
+        "benign",
+        "anomaly"
+      ],
+      "note": "rows=actual, cols=predicted; [0,0]=TN [0,1]=FP [1,0]=FN [1,1]=TP"
+    },
+    "support": {
+      "total": 6300,
+      "positives": 6250,
+      "negatives": 50
+    },
+    "score_source": "Layer 3 fused_score \u2014 continuous [0, 1] from trust-weighted fusion engine",
+    "decision_mapping": {
+      "observe": 0,
+      "review": 1,
+      "escalate": 1
+    }
+  },
+  "baselines": [
+    {
+      "name": "OneClassSVM (nu=0.10)",
+      "precision": 0.998395,
+      "recall": 0.796,
+      "f1": 0.885783,
+      "roc_auc": 0.889494
+    },
+    {
+      "name": "OneClassSVM (nu=0.05)",
+      "precision": 0.998991,
+      "recall": 0.792,
+      "f1": 0.883534,
+      "roc_auc": 0.890861
+    },
+    {
+      "name": "LocalOutlierFactor (k=20, cont=0.10)",
+      "precision": 0.999176,
+      "recall": 0.776,
+      "f1": 0.873559,
+      "roc_auc": 0.890384
+    },
+    {
+      "name": "IsolationForest (n=100, cont=0.10)",
+      "precision": 0.99752,
+      "recall": 0.77232,
+      "f1": 0.870592,
+      "roc_auc": 0.86424
+    },
+    {
+      "name": "LocalOutlierFactor (k=10, cont=0.05)",
+      "precision": 0.999168,
+      "recall": 0.76864,
+      "f1": 0.868873,
+      "roc_auc": 0.88719
+    },
+    {
+      "name": "EllipticEnvelope (cont=0.10)",
+      "precision": 0.998748,
+      "recall": 0.76592,
+      "f1": 0.866975,
+      "roc_auc": 0.884739
+    },
+    {
+      "name": "KMeans (k=5)",
+      "precision": 0.999787,
+      "recall": 0.75056,
+      "f1": 0.85743,
+      "roc_auc": 0.8844
+    },
+    {
+      "name": "ZScore (threshold=2.5)",
+      "precision": 1.0,
+      "recall": 0.73488,
+      "f1": 0.847183,
+      "roc_auc": 0.895421
+    },
+    {
+      "name": "ZScore (threshold=3.0)",
+      "precision": 1.0,
+      "recall": 0.7256,
+      "f1": 0.840983,
+      "roc_auc": 0.895421
+    },
+    {
+      "name": "IQR (multiplier=1.5)",
+      "precision": 1.0,
+      "recall": 0.71824,
+      "f1": 0.836018,
+      "roc_auc": 0.85912
+    },
+    {
+      "name": "IsolationForest (n=200, cont=0.05)",
+      "precision": 0.999104,
+      "recall": 0.71328,
+      "f1": 0.832338,
+      "roc_auc": 0.867907
+    },
+    {
+      "name": "IQR (multiplier=2.0)",
+      "precision": 1.0,
+      "recall": 0.70064,
+      "f1": 0.823972,
+      "roc_auc": 0.85032
+    },
+    {
+      "name": "MovingAverage (w=10)",
+      "precision": 0.994439,
+      "recall": 0.31472,
+      "f1": 0.478123,
+      "roc_auc": 0.453107
+    },
+    {
+      "name": "DBSCAN (eps=0.5, min_samples=5)",
+      "precision": 1.0,
+      "recall": 0.04688,
+      "f1": 0.089561,
+      "roc_auc": 0.881971
+    }
+  ],
+  "best_baseline_f1": {
+    "name": "OneClassSVM (nu=0.10)",
+    "f1": 0.885783
+  },
+  "best_baseline_roc_auc": {
+    "name": "ZScore (threshold=3.0)",
+    "roc_auc": 0.895421
+  },
+  "dissertation_claims": {
+    "f1": {
+      "claimed": 1.0,
+      "actual": 1.0,
+      "delta": 0.0,
+      "within_tolerance": true
+    },
+    "roc_auc": {
+      "claimed": 1.0,
+      "actual": 1.0,
+      "delta": 0.0,
+      "within_tolerance": true
+    },
+    "all_pass": true,
+    "tolerance": 0.02
+  }
+}

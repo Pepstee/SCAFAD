@@ -1,0 +1,62 @@
+{
+  "anomaly": "benign",
+  "function_profile_id": "image_resizer",
+  "execution_phase": "invoke",
+  "concurrency_id": "FIK",
+  "invocation_timestamp": 1754699759.3349218,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0018",
+  "batch_id": "batch_1754699759_1840",
+  "seed": 42,
+  "invocation_index": 18,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": true,
+  "generic_data": {
+    "type": "image_resizer",
+    "data": "test_data_8028"
+  },
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:35:59.334921",
+    "mode": "test",
+    "total_invocations": 25,
+    "invocation_index": 18,
+    "anomaly_category": "normal"
+  },
+  "execution_environment": {
+    "region": "ap-southeast-1",
+    "availability_zone": "b",
+    "runtime": "python3.10",
+    "memory_allocation": 3008,
+    "architecture": "arm64"
+  },
+  "performance_targets": {
+    "max_duration": 9.374635585897659,
+    "max_memory_mb": 249,
+    "expected_latency": 0.6760144941721512
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_0b43d5a5-b141-479a-8559-129a32b3783e",
+  "parent_invocation": null,
+  "graph_analysis": true,
+  "graph_type": "star_topology",
+  "graph_config": {
+    "node_count": 12,
+    "edge_count": 11,
+    "topology": "star",
+    "center_node": "node_center_18"
+  },
+  "analysis_depth": 4,
+  "enable_clustering": true,
+  "temporal_analysis": true,
+  "timeout_scenario": true,
+  "timeout_config": {
+    "timeout_after": 20.00255260738973,
+    "timeout_type": "hard",
+    "recovery_strategy": "abort"
+  }
+}

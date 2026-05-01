@@ -1,0 +1,420 @@
+{
+  "anomaly": "io_intensive",
+  "function_profile_id": "log_aggregator",
+  "execution_phase": "invoke",
+  "concurrency_id": "EGO",
+  "invocation_timestamp": 1754699559.3619087,
+  "test_mode": true,
+  "payload_id": "scafad_l0_0007",
+  "batch_id": "batch_1754699559_7498",
+  "seed": 42,
+  "invocation_index": 7,
+  "layer0_enhanced": true,
+  "schema_version": "v4.2",
+  "enable_graph_analysis": true,
+  "enable_provenance": true,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": true,
+  "generic_data": {
+    "type": "log_aggregator",
+    "data": "test_data_4375"
+  },
+  "metadata": {
+    "generator": "scafad_enhanced_invoke.py",
+    "generation_time": "2025-08-09T01:32:39.361908",
+    "mode": "test",
+    "total_invocations": 10,
+    "invocation_index": 7,
+    "anomaly_category": "synthetic"
+  },
+  "io_operations": [
+    {
+      "type": "write",
+      "size": 727444
+    },
+    {
+      "type": "read",
+      "size": 66166
+    },
+    {
+      "type": "read",
+      "size": 489026
+    },
+    {
+      "type": "write",
+      "size": 168499
+    },
+    {
+      "type": "write",
+      "size": 720424
+    },
+    {
+      "type": "write",
+      "size": 724845
+    },
+    {
+      "type": "read",
+      "size": 670761
+    },
+    {
+      "type": "write",
+      "size": 386421
+    },
+    {
+      "type": "read",
+      "size": 230796
+    },
+    {
+      "type": "read",
+      "size": 502434
+    },
+    {
+      "type": "read",
+      "size": 478103
+    },
+    {
+      "type": "write",
+      "size": 437069
+    },
+    {
+      "type": "write",
+      "size": 795163
+    },
+    {
+      "type": "read",
+      "size": 799891
+    },
+    {
+      "type": "read",
+      "size": 714414
+    },
+    {
+      "type": "read",
+      "size": 552057
+    },
+    {
+      "type": "write",
+      "size": 554853
+    },
+    {
+      "type": "write",
+      "size": 82920
+    },
+    {
+      "type": "read",
+      "size": 65782
+    },
+    {
+      "type": "read",
+      "size": 601545
+    },
+    {
+      "type": "read",
+      "size": 173553
+    },
+    {
+      "type": "write",
+      "size": 897017
+    },
+    {
+      "type": "write",
+      "size": 122910
+    },
+    {
+      "type": "read",
+      "size": 752766
+    },
+    {
+      "type": "write",
+      "size": 96383
+    },
+    {
+      "type": "write",
+      "size": 848999
+    },
+    {
+      "type": "read",
+      "size": 476482
+    },
+    {
+      "type": "read",
+      "size": 539203
+    },
+    {
+      "type": "write",
+      "size": 480011
+    },
+    {
+      "type": "read",
+      "size": 586965
+    },
+    {
+      "type": "write",
+      "size": 706472
+    },
+    {
+      "type": "write",
+      "size": 759438
+    },
+    {
+      "type": "read",
+      "size": 416206
+    },
+    {
+      "type": "write",
+      "size": 857137
+    },
+    {
+      "type": "read",
+      "size": 783056
+    },
+    {
+      "type": "read",
+      "size": 607427
+    },
+    {
+      "type": "read",
+      "size": 48513
+    },
+    {
+      "type": "write",
+      "size": 362288
+    },
+    {
+      "type": "read",
+      "size": 568475
+    },
+    {
+      "type": "read",
+      "size": 981005
+    },
+    {
+      "type": "read",
+      "size": 1035063
+    },
+    {
+      "type": "write",
+      "size": 34300
+    },
+    {
+      "type": "write",
+      "size": 429752
+    },
+    {
+      "type": "read",
+      "size": 807349
+    },
+    {
+      "type": "read",
+      "size": 804052
+    },
+    {
+      "type": "write",
+      "size": 393674
+    },
+    {
+      "type": "write",
+      "size": 471349
+    },
+    {
+      "type": "write",
+      "size": 394916
+    },
+    {
+      "type": "read",
+      "size": 716918
+    },
+    {
+      "type": "read",
+      "size": 686304
+    },
+    {
+      "type": "write",
+      "size": 125419
+    },
+    {
+      "type": "read",
+      "size": 1042099
+    },
+    {
+      "type": "write",
+      "size": 555555
+    },
+    {
+      "type": "read",
+      "size": 764238
+    },
+    {
+      "type": "read",
+      "size": 876397
+    },
+    {
+      "type": "read",
+      "size": 793935
+    },
+    {
+      "type": "read",
+      "size": 1027045
+    },
+    {
+      "type": "write",
+      "size": 486518
+    },
+    {
+      "type": "write",
+      "size": 558796
+    },
+    {
+      "type": "write",
+      "size": 864379
+    },
+    {
+      "type": "read",
+      "size": 260559
+    },
+    {
+      "type": "write",
+      "size": 363998
+    },
+    {
+      "type": "read",
+      "size": 290063
+    },
+    {
+      "type": "read",
+      "size": 983970
+    },
+    {
+      "type": "read",
+      "size": 34806
+    },
+    {
+      "type": "write",
+      "size": 645817
+    },
+    {
+      "type": "read",
+      "size": 253380
+    },
+    {
+      "type": "read",
+      "size": 71583
+    },
+    {
+      "type": "read",
+      "size": 623819
+    },
+    {
+      "type": "read",
+      "size": 469151
+    },
+    {
+      "type": "read",
+      "size": 257646
+    },
+    {
+      "type": "read",
+      "size": 422829
+    },
+    {
+      "type": "write",
+      "size": 246746
+    },
+    {
+      "type": "read",
+      "size": 792054
+    },
+    {
+      "type": "read",
+      "size": 147966
+    },
+    {
+      "type": "write",
+      "size": 246560
+    },
+    {
+      "type": "write",
+      "size": 606550
+    },
+    {
+      "type": "write",
+      "size": 249435
+    },
+    {
+      "type": "write",
+      "size": 919847
+    },
+    {
+      "type": "read",
+      "size": 1034600
+    },
+    {
+      "type": "read",
+      "size": 434673
+    },
+    {
+      "type": "write",
+      "size": 289543
+    },
+    {
+      "type": "read",
+      "size": 584785
+    },
+    {
+      "type": "read",
+      "size": 657425
+    },
+    {
+      "type": "write",
+      "size": 583875
+    },
+    {
+      "type": "write",
+      "size": 50185
+    },
+    {
+      "type": "write",
+      "size": 988348
+    },
+    {
+      "type": "write",
+      "size": 824999
+    },
+    {
+      "type": "write",
+      "size": 731156
+    },
+    {
+      "type": "write",
+      "size": 429114
+    },
+    {
+      "type": "read",
+      "size": 315479
+    },
+    {
+      "type": "write",
+      "size": 193835
+    },
+    {
+      "type": "write",
+      "size": 253697
+    }
+  ],
+  "io_pattern": "sequential",
+  "execution_environment": {
+    "region": "us-west-2",
+    "availability_zone": "c",
+    "runtime": "python3.10",
+    "memory_allocation": 512,
+    "architecture": "arm64"
+  },
+  "performance_targets": {
+    "max_duration": 14.521263364522557,
+    "max_memory_mb": 728,
+    "expected_latency": 1.8603718222027212
+  },
+  "force_starvation": false,
+  "provenance_chain": "chain_78b0d3a1-015a-41f5-9185-75c4c67ce318",
+  "parent_invocation": null
+}

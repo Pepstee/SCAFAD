@@ -1,0 +1,31 @@
+{
+  "payload_id": "payload_0000",
+  "batch_id": "batch_0000",
+  "function_profile_id": "func_003",
+  "concurrency_id": "conc_002",
+  "invocation_timestamp": 1744718400.0,
+  "execution_phase": "validation",
+  "anomaly": "none",
+  "test_mode": true,
+  "force_starvation": false,
+  "enable_economic_monitoring": true,
+  "enable_adversarial_detection": false,
+  "network_calls": 2,
+  "large_data": false,
+  "httpMethod": "POST",
+  "generic_data": {
+    "index": 0,
+    "tag": "test_none"
+  },
+  "execution_environment": {
+    "memory_allocation": 256,
+    "runtime": "python3.11",
+    "region": "us-east-1"
+  },
+  "telemetry_fields": {
+    "duration_ms": 142,
+    "billed_duration_ms": 200,
+    "max_memory_used_mb": 128,
+    "init_duration_ms": 0
+  }
+}

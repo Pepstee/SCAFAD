@@ -1,0 +1,1 @@
+import{j as e}from"./vendor-query-Bk0i51EZ.js";import{C as s}from"./Card-B83Ag5kz.js";function t({title:t,body:r,cta:a}){return e.jsx(s,{children:e.jsxs("div",{className:"flex flex-col items-start gap-2 py-6",children:[e.jsx("div",{className:"text-base font-semibold text-ink",children:t}),r&&e.jsx("div",{className:"text-sm text-surface-muted",children:r}),a]})})}export{t as E};

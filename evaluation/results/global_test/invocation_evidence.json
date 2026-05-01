@@ -1,0 +1,627 @@
+{
+  "test_metadata": {
+    "task_id": "20c72349-8cd4-4555-84e4-e874dc3dd0c6",
+    "task_title": "GT-2: Execute live AWS Lambda invocation",
+    "execution_timestamp_iso": "2026-04-30T14:25:41.602960+00:00",
+    "execution_timestamp_unix": 1777559141.7009656,
+    "invocation_method": "direct_python_import",
+    "handler_path": "scafad.runtime.lambda_handler.lambda_handler"
+  },
+  "request_payload": {
+    "event_id": "gt2_global_test_20260430",
+    "record_id": "gt2_global_test_001",
+    "timestamp": 1777559141.6029603,
+    "function_name": "global_test_handler",
+    "function_id": "func-gt2-global-test",
+    "execution_phase": "invoke",
+    "anomaly_type": "behavioral_drift",
+    "duration": 245.5,
+    "cpu": 85.2,
+    "memory_spike_kb": 512,
+    "network_io_bytes": 4096,
+    "region": "eu-west-2",
+    "runtime_version": "python3.12",
+    "trigger_type": "lambda_invoke",
+    "payload_size_bytes": 2048,
+    "adversarial_score": 0.72,
+    "economic_risk_score": 0.31,
+    "silent_failure_probability": 0.18,
+    "completeness_score": 0.98,
+    "confidence_level": 0.85,
+    "data_quality_score": 0.92,
+    "analyst_label": "global_test_layer6_activation_20260430",
+    "custom_fields": {
+      "test_suite": "gt2_global_test",
+      "test_phase": "evidence_capture",
+      "invocation_method": "direct_python_import"
+    },
+    "tags": {
+      "test_run": "true",
+      "global_test": "true",
+      "layer6_trigger": "analyst_label_set"
+    }
+  },
+  "response_metadata": {
+    "http_status_code": 200,
+    "elapsed_seconds": 0.09592342376708984,
+    "response_size_bytes": 15718
+  },
+  "response_body": {
+    "layer0_record": {
+      "event_id": "gt2_global_test_20260430",
+      "timestamp": 1777559141.6029603,
+      "function_id": "func-gt2-global-test",
+      "execution_phase": "invoke",
+      "anomaly_type": "benign",
+      "duration": 245.5,
+      "memory_spike_kb": 512,
+      "cpu_utilization": 85.2,
+      "network_io_bytes": 4096,
+      "fallback_mode": false,
+      "source": "scafad-layer0",
+      "concurrency_id": "runtime-concurrency",
+      "container_id": null,
+      "region": "eu-west-2",
+      "runtime_version": "python3.12",
+      "trigger_type": "lambda_invoke",
+      "payload_size_bytes": 2048,
+      "payload_hash": "0863a2f731bfa990",
+      "provenance_id": null,
+      "graph_node_id": null,
+      "parent_chain": [],
+      "causal_depth": 0,
+      "adversarial_score": 0.25,
+      "economic_risk_score": 0.0,
+      "silent_failure_probability": 0.4,
+      "completeness_score": 0.98,
+      "confidence_level": 0.0964,
+      "data_quality_score": 0.92,
+      "schema_version": "v4.2",
+      "emission_timestamp": 1777559141.6386886,
+      "emission_channels": [],
+      "emission_attempts": 0,
+      "custom_fields": {
+        "test_suite": "gt2_global_test",
+        "test_phase": "evidence_capture",
+        "invocation_method": "direct_python_import",
+        "l0_detection_summary": {
+          "trust_weighted_score": 0.1091,
+          "combined_confidence": 0.0964,
+          "combined_severity": 0.0964,
+          "final_anomaly_detected": false,
+          "consensus_strength": 0.1923,
+          "detector_count": 26
+        }
+      },
+      "tags": {
+        "test_run": "true",
+        "global_test": "true",
+        "layer6_trigger": "analyst_label_set"
+      },
+      "signature": null,
+      "signature_algorithm": "HMAC-SHA256",
+      "content_hash": null
+    },
+    "adapted_record": {
+      "record_id": "b7e24434-5dd7-4a5d-a318-d236c7b00bf1",
+      "timestamp": 1777559141.6029603,
+      "function_name": "func-gt2-global-test",
+      "execution_phase": "execution",
+      "anomaly_type": "benign",
+      "telemetry_data": {
+        "l0_duration_ms": 245.5,
+        "l0_memory_spike_kb": 512,
+        "l0_cpu_utilization": 85.2,
+        "l0_network_io_bytes": 4096,
+        "l0_fallback_mode": false,
+        "l0_payload_size_bytes": 2048,
+        "l0_payload_hash": "0863a2f731bfa990",
+        "layer0_metrics": {
+          "l0_adapter_version": "2.0.1",
+          "l0_original_anomaly_type": "benign",
+          "l0_original_execution_phase": "invoke",
+          "l0_schema_version": "v4.2",
+          "l0_processing_timestamp": "2026-04-30T14:25:41.689939+00:00"
+        }
+      },
+      "provenance_chain": {
+        "source_layer": "layer_0",
+        "provenance_id": null,
+        "parent_chain": [],
+        "graph_node_id": null,
+        "causal_depth": 0,
+        "source": "scafad-layer0",
+        "concurrency_id": "runtime-concurrency",
+        "conversion_timestamp": "2026-04-30T14:25:41.689939+00:00",
+        "adapter_version": "2.0.1",
+        "schema_migration": "r_core_v4.2_to_layer1_v2.1"
+      },
+      "context_metadata": {
+        "adversarial_score": 0.25,
+        "economic_risk_score": 0.0,
+        "silent_failure_probability": 0.4,
+        "completeness_score": 0.98,
+        "confidence_level": 0.0964,
+        "data_quality_score": 0.92,
+        "original_anomaly_type": "benign",
+        "anomaly_normalised_to": "benign",
+        "anomaly_severity": 0,
+        "anomaly_category": "normal",
+        "original_execution_phase": "invoke",
+        "execution_phase_normalised_to": "execution",
+        "container_id": null,
+        "region": "eu-west-2",
+        "runtime_version": "python3.12",
+        "trigger_type": "lambda_invoke",
+        "signature": null,
+        "content_hash": null,
+        "signature_algorithm": "HMAC-SHA256",
+        "emission_channels": [],
+        "emission_attempts": 0,
+        "emission_timestamp": 1777559141.6386886,
+        "tags": {
+          "test_run": "true",
+          "global_test": "true",
+          "layer6_trigger": "analyst_label_set"
+        },
+        "custom_fields": {
+          "test_suite": "gt2_global_test",
+          "test_phase": "evidence_capture",
+          "invocation_method": "direct_python_import",
+          "l0_detection_summary": {
+            "trust_weighted_score": 0.1091,
+            "combined_confidence": 0.0964,
+            "combined_severity": 0.0964,
+            "final_anomaly_detected": false,
+            "consensus_strength": 0.1923,
+            "detector_count": 26
+          }
+        },
+        "l0_schema_version": "v4.2"
+      },
+      "schema_version": "v2.1"
+    },
+    "layer1_record": {
+      "record_id": "b7e24434-5dd7-4a5d-a318-d236c7b00bf1",
+      "function_name": "func-gt2-global-test",
+      "timestamp": 1777559141.6029603,
+      "anomaly_type": "benign",
+      "execution_phase": "execution",
+      "schema_version": "v2.1",
+      "telemetry_data": {
+        "l0_duration_ms": 245.5,
+        "l0_memory_spike_kb": 512,
+        "l0_cpu_utilization": 85.2,
+        "l0_network_io_bytes": 4096,
+        "l0_fallback_mode": false,
+        "l0_payload_size_bytes": 2048,
+        "l0_payload_hash": "0863a2f731bfa990",
+        "layer0_metrics": {
+          "l0_adapter_version": "2.0.1",
+          "l0_original_anomaly_type": "benign",
+          "l0_original_execution_phase": "invoke",
+          "l0_schema_version": "v4.2",
+          "l0_processing_timestamp": "2026-04-30T14:25:41.689939+00:00"
+        }
+      },
+      "context_metadata": {
+        "adversarial_score": 0.25,
+        "economic_risk_score": 0.0,
+        "silent_failure_probability": 0.4,
+        "completeness_score": 0.98,
+        "confidence_level": 0.0964,
+        "data_quality_score": 0.92,
+        "original_anomaly_type": "benign",
+        "anomaly_normalised_to": "benign",
+        "anomaly_severity": 0,
+        "anomaly_category": "normal",
+        "original_execution_phase": "invoke",
+        "execution_phase_normalised_to": "execution",
+        "container_id": null,
+        "region": "eu-west-2",
+        "runtime_version": "python3.12",
+        "trigger_type": "97c705f3598dde3ca4a28f6e4cbe26272c2a70c8323ea58a778adb865c00d6e1",
+        "signature": null,
+        "content_hash": null,
+        "signature_algorithm": "HMAC-SHA256",
+        "emission_channels": [],
+        "emission_attempts": 0,
+        "emission_timestamp": 1777559141.6386886,
+        "tags": {
+          "test_run": "true",
+          "global_test": "true",
+          "layer6_trigger": "analyst_label_set"
+        },
+        "custom_fields": {
+          "test_suite": "gt2_global_test",
+          "test_phase": "evidence_capture",
+          "invocation_method": "direct_python_import",
+          "l0_detection_summary": {
+            "trust_weighted_score": 0.1091,
+            "combined_confidence": 0.0964,
+            "combined_severity": 0.0964,
+            "final_anomaly_detected": false,
+            "consensus_strength": 0.1923,
+            "detector_count": 26
+          }
+        },
+        "l0_schema_version": "v4.2"
+      },
+      "provenance_chain": {
+        "source_layer": "layer_0",
+        "provenance_id": null,
+        "parent_chain": [],
+        "graph_node_id": null,
+        "causal_depth": 0,
+        "source": "scafad-layer0",
+        "concurrency_id": "43f1411106c37364b7300a87090b69637be10723ac3ad4c2f03ac0b4b9ab42fb",
+        "conversion_timestamp": "2026-04-30T14:25:41.689939+00:00",
+        "adapter_version": "2.0.1",
+        "schema_migration": "r_core_v4.2_to_layer1_v2.1"
+      },
+      "quality_report": {
+        "completeness_score": 1.0,
+        "anomaly_signal_preservation": 1.0,
+        "pii_fields_redacted": 0,
+        "issues": []
+      },
+      "audit_record": {
+        "phases_completed": [
+          "validation",
+          "sanitisation",
+          "privacy",
+          "hashing",
+          "preservation",
+          "quality",
+          "audit"
+        ],
+        "redacted_fields": [],
+        "hashed_fields": [
+          "provenance_chain.concurrency_id",
+          "context_metadata.trigger_type"
+        ],
+        "sanitiser_flags": [],
+        "privacy_actions": [],
+        "hashing_actions": [
+          {
+            "field_path": "provenance_chain.concurrency_id",
+            "algorithm": "sha256"
+          },
+          {
+            "field_path": "context_metadata.trigger_type",
+            "algorithm": "sha256"
+          }
+        ],
+        "preservation_at_risk": [],
+        "preservation_recommendations": [],
+        "warnings": [],
+        "validation_errors": [],
+        "processing_time_ms": 5.303
+      },
+      "trace_id": "b172c3151d46f805c259883822be43bd6e2b325f",
+      "trust_context": {
+        "confidence_level": 0.0964,
+        "preservation_score": 1.0,
+        "trust_score": 0.1,
+        "source_layer": "layer_1"
+      }
+    },
+    "multilayer_result": {
+      "layer1": {
+        "record_id": "b7e24434-5dd7-4a5d-a318-d236c7b00bf1",
+        "function_name": "func-gt2-global-test",
+        "timestamp": 1777559141.6029603,
+        "anomaly_type": "benign",
+        "execution_phase": "execution",
+        "schema_version": "v2.1",
+        "telemetry_data": {
+          "l0_duration_ms": 245.5,
+          "l0_memory_spike_kb": 512,
+          "l0_cpu_utilization": 85.2,
+          "l0_network_io_bytes": 4096,
+          "l0_fallback_mode": false,
+          "l0_payload_size_bytes": 2048,
+          "l0_payload_hash": "0863a2f731bfa990",
+          "layer0_metrics": {
+            "l0_adapter_version": "2.0.1",
+            "l0_original_anomaly_type": "benign",
+            "l0_original_execution_phase": "invoke",
+            "l0_schema_version": "v4.2",
+            "l0_processing_timestamp": "2026-04-30T14:25:41.689939+00:00"
+          }
+        },
+        "context_metadata": {
+          "adversarial_score": 0.25,
+          "economic_risk_score": 0.0,
+          "silent_failure_probability": 0.4,
+          "completeness_score": 0.98,
+          "confidence_level": 0.0964,
+          "data_quality_score": 0.92,
+          "original_anomaly_type": "benign",
+          "anomaly_normalised_to": "benign",
+          "anomaly_severity": 0,
+          "anomaly_category": "normal",
+          "original_execution_phase": "invoke",
+          "execution_phase_normalised_to": "execution",
+          "container_id": null,
+          "region": "eu-west-2",
+          "runtime_version": "python3.12",
+          "trigger_type": "97c705f3598dde3ca4a28f6e4cbe26272c2a70c8323ea58a778adb865c00d6e1",
+          "signature": null,
+          "content_hash": null,
+          "signature_algorithm": "HMAC-SHA256",
+          "emission_channels": [],
+          "emission_attempts": 0,
+          "emission_timestamp": 1777559141.6386886,
+          "tags": {
+            "test_run": "true",
+            "global_test": "true",
+            "layer6_trigger": "analyst_label_set"
+          },
+          "custom_fields": {
+            "test_suite": "gt2_global_test",
+            "test_phase": "evidence_capture",
+            "invocation_method": "direct_python_import",
+            "l0_detection_summary": {
+              "trust_weighted_score": 0.1091,
+              "combined_confidence": 0.0964,
+              "combined_severity": 0.0964,
+              "final_anomaly_detected": false,
+              "consensus_strength": 0.1923,
+              "detector_count": 26
+            }
+          },
+          "l0_schema_version": "v4.2"
+        },
+        "provenance_chain": {
+          "source_layer": "layer_0",
+          "provenance_id": null,
+          "parent_chain": [],
+          "graph_node_id": null,
+          "causal_depth": 0,
+          "source": "scafad-layer0",
+          "concurrency_id": "43f1411106c37364b7300a87090b69637be10723ac3ad4c2f03ac0b4b9ab42fb",
+          "conversion_timestamp": "2026-04-30T14:25:41.689939+00:00",
+          "adapter_version": "2.0.1",
+          "schema_migration": "r_core_v4.2_to_layer1_v2.1"
+        },
+        "quality_report": {
+          "completeness_score": 1.0,
+          "anomaly_signal_preservation": 1.0,
+          "pii_fields_redacted": 0,
+          "issues": []
+        },
+        "audit_record": {
+          "phases_completed": [
+            "validation",
+            "sanitisation",
+            "privacy",
+            "hashing",
+            "preservation",
+            "quality",
+            "audit"
+          ],
+          "redacted_fields": [],
+          "hashed_fields": [
+            "provenance_chain.concurrency_id",
+            "context_metadata.trigger_type"
+          ],
+          "sanitiser_flags": [],
+          "privacy_actions": [],
+          "hashing_actions": [
+            {
+              "field_path": "provenance_chain.concurrency_id",
+              "algorithm": "sha256"
+            },
+            {
+              "field_path": "context_metadata.trigger_type",
+              "algorithm": "sha256"
+            }
+          ],
+          "preservation_at_risk": [],
+          "preservation_recommendations": [],
+          "warnings": [],
+          "validation_errors": [],
+          "processing_time_ms": 5.303
+        },
+        "trace_id": "b172c3151d46f805c259883822be43bd6e2b325f",
+        "trust_context": {
+          "confidence_level": 0.0964,
+          "preservation_score": 1.0,
+          "trust_score": 0.1,
+          "source_layer": "layer_1"
+        }
+      },
+      "layer2": {
+        "record_id": "b7e24434-5dd7-4a5d-a318-d236c7b00bf1",
+        "trace_id": "b172c3151d46f805c259883822be43bd6e2b325f",
+        "anomaly_type": "benign",
+        "execution_phase": "execution",
+        "trust_context": {
+          "confidence_level": 0.0964,
+          "preservation_score": 1.0,
+          "trust_score": 0.1,
+          "source_layer": "layer_1"
+        },
+        "signals": [
+          {
+            "detector_name": "rule_chain",
+            "score": 0.6,
+            "confidence": 0.7,
+            "rationale": "Triggered rule checks on duration, cpu, network",
+            "evidence": {
+              "duration_ms": 245.5,
+              "memory_spike_kb": 512.0,
+              "cpu_utilization": 85.2,
+              "network_io_bytes": 4096.0,
+              "triggers": [
+                "duration",
+                "cpu",
+                "network"
+              ]
+            }
+          },
+          {
+            "detector_name": "drift_tracker",
+            "score": 0.10300000000000001,
+            "confidence": 0.65,
+            "rationale": "Observed drift markers=0, economic_risk=0.00, silent_failure=0.40",
+            "evidence": {
+              "drift_markers": [],
+              "economic_risk_score": 0.0,
+              "silent_failure_probability": 0.4,
+              "completeness_score": 0.98
+            }
+          },
+          {
+            "detector_name": "graph_immunized",
+            "score": 0.0,
+            "confidence": 0.6,
+            "rationale": "Graph evidence density=0.00, causal_depth=0.0",
+            "evidence": {
+              "graph_edge_count": 0.0,
+              "graph_node_count": 1.0,
+              "causal_depth": 0.0,
+              "graph_density": 0.0,
+              "graph_node_id": null
+            }
+          },
+          {
+            "detector_name": "semantic_deviation",
+            "score": 0.1,
+            "confidence": 0.75,
+            "rationale": "Semantic analysis based on anomaly_type=benign, category=normal, severity=0",
+            "evidence": {
+              "anomaly_type": "benign",
+              "anomaly_category": "normal",
+              "anomaly_severity": 0.0,
+              "execution_phase": "execution"
+            }
+          }
+        ],
+        "aggregate_score": 0.2081,
+        "anomaly_indicated": true,
+        "detector_consensus": 0.25,
+        "telemetry_evidence": {
+          "duration_ms": 245.5,
+          "memory_spike_kb": 512,
+          "cpu_utilization": 85.2,
+          "network_io_bytes": 4096
+        },
+        "evidence_summary": [
+          "Triggered rule checks on duration, cpu, network",
+          "Observed drift markers=0, economic_risk=0.00, silent_failure=0.40",
+          "Semantic analysis based on anomaly_type=benign, category=normal, severity=0"
+        ]
+      },
+      "layer3": {
+        "record_id": "b7e24434-5dd7-4a5d-a318-d236c7b00bf1",
+        "trace_id": "b172c3151d46f805c259883822be43bd6e2b325f",
+        "fused_score": 0.2331,
+        "volatility_adjustment": 0.0,
+        "trust_score_input": 0.1,
+        "consensus_strength": 0.25,
+        "risk_band": "low",
+        "trust_weights": {
+          "rule_chain": 0.315,
+          "drift_tracker": 0.2925,
+          "graph_immunized": 0.27,
+          "semantic_deviation": 0.3375
+        },
+        "leading_signals": [
+          {
+            "detector_name": "rule_chain",
+            "score": 0.6,
+            "confidence": 0.7,
+            "rationale": "Triggered rule checks on duration, cpu, network",
+            "evidence": {
+              "duration_ms": 245.5,
+              "memory_spike_kb": 512.0,
+              "cpu_utilization": 85.2,
+              "network_io_bytes": 4096.0,
+              "triggers": [
+                "duration",
+                "cpu",
+                "network"
+              ]
+            }
+          },
+          {
+            "detector_name": "drift_tracker",
+            "score": 0.10300000000000001,
+            "confidence": 0.65,
+            "rationale": "Observed drift markers=0, economic_risk=0.00, silent_failure=0.40",
+            "evidence": {
+              "drift_markers": [],
+              "economic_risk_score": 0.0,
+              "silent_failure_probability": 0.4,
+              "completeness_score": 0.98
+            }
+          }
+        ]
+      },
+      "layer4": {
+        "record_id": "b7e24434-5dd7-4a5d-a318-d236c7b00bf1",
+        "trace_id": "b172c3151d46f805c259883822be43bd6e2b325f",
+        "decision": "review",
+        "severity": "medium",
+        "verbosity": "standard",
+        "explanation_summary": "Decision=review with fused_score=0.2331 (risk_band=low) from 4 Layer-2 signals; consensus=0.2500.",
+        "explanation_points": [
+          "rule_chain: score=0.6000, confidence=0.7000 \u2014 Triggered rule checks on duration, cpu, network",
+          "drift_tracker: score=0.1030, confidence=0.6500 \u2014 Observed drift markers=0, economic_risk=0.00, silent_failure=0.40"
+        ],
+        "recommended_action": "analyst_triage",
+        "evidence_items": [],
+        "redacted_fields": [],
+        "trace_metadata": {
+          "aggregate_score": "0.2081",
+          "volatility_adjustment": "0.0000",
+          "risk_band": "low",
+          "consensus_strength": "0.2500",
+          "verbosity": "standard",
+          "redaction_budget": "0"
+        }
+      },
+      "layer5": {
+        "record_id": "b7e24434-5dd7-4a5d-a318-d236c7b00bf1",
+        "trace_id": "b172c3151d46f805c259883822be43bd6e2b325f",
+        "tactics": [
+          "collection"
+        ],
+        "techniques": [
+          "T1059.009"
+        ],
+        "campaign_cluster": "review-collection",
+        "alignment_confidence": 0.6,
+        "attack_story": "Decision review aligned with tactic collection because anomaly label 'benign' and explanation severity 'medium' indicate a low risk pattern."
+      },
+      "layer6": {
+        "record_id": "b7e24434-5dd7-4a5d-a318-d236c7b00bf1",
+        "trace_id": "b172c3151d46f805c259883822be43bd6e2b325f",
+        "adjusted_trust": 0.75,
+        "replay_queue_size": 1,
+        "replay_priority": "medium",
+        "feedback_events": [
+          {
+            "record_id": "b7e24434-5dd7-4a5d-a318-d236c7b00bf1",
+            "trace_id": "b172c3151d46f805c259883822be43bd6e2b325f",
+            "analyst_label": "global_test_layer6_activation_20260430",
+            "trust_delta": -0.05
+          }
+        ]
+      }
+    }
+  },
+  "layer6_activation": {
+    "triggered": true,
+    "analyst_label_sent": "global_test_layer6_activation_20260430",
+    "layer6_output_present": true
+  },
+  "all_layers_structure": {
+    "layer0_present": true,
+    "layer1_present": true,
+    "multilayer_result_present": true,
+    "layer6_non_null": true
+  }
+}
